@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YISHUI Tools - Professional Diamond Tools Manufacturer">
+    <title>YISHUI Tools - Professional Diamond Tools Manufacturer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===== Top Bar ===== -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <span><i class="fas fa-envelope"></i> 2289894015@qq.com</span>
+                <span><i class="fas fa-phone"></i> 18369576279</span>
+            </div>
+            <div class="top-bar-right">
+                <div class="lang-switcher">
+                    <button class="lang-btn" id="langCurrent" onclick="toggleLangMenu()">
+                        <i class="fas fa-globe"></i> English <i class="fas fa-caret-down"></i>
+                    </button>
+                    <div class="lang-menu" id="langMenu">
+                        <a href="#" onclick="setLanguage('en');toggleLangMenu();return false;">English</a>
+                        <a href="#" onclick="setLanguage('zh');toggleLangMenu();return false;">中文</a>
+                        <a href="#" onclick="setLanguage('ar');toggleLangMenu();return false;">العربية</a>
+                        <a href="#" onclick="setLanguage('es');toggleLangMenu();return false;">Español</a>
+                        <a href="#" onclick="setLanguage('ru');toggleLangMenu();return false;">Русский</a>
+                        <a href="#" onclick="setLanguage('pt');toggleLangMenu();return false;">Português</a>
+                        <a href="#" onclick="setLanguage('fr');toggleLangMenu();return false;">Français</a>
+                        <a href="#" onclick="setLanguage('de');toggleLangMenu();return false;">Deutsch</a>
+                        <a href="#" onclick="setLanguage('ja');toggleLangMenu();return false;">日本語</a>
+                        <a href="#" onclick="setLanguage('ko');toggleLangMenu();return false;">한국어</a>
+                        <a href="#" onclick="setLanguage('hi');toggleLangMenu();return false;">हिन्दी</a>
+                        <a href="#" onclick="setLanguage('th');toggleLangMenu();return false;">ไทย</a>
+                    </div>
+                </div>
+                <div class="social-top">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Header / Navigation ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="images/logo.png" alt="YISHUI Tools" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-name">YISHUI</span>
+                    <span class="logo-sub">Diamond Tools</span>
+                </div>
+            </a>
+            <nav class="nav" id="nav">
+                <a href="#home" class="nav-link active" data-i18n="home">Home</a>
+                <a href="#about" class="nav-link" data-i18n="about">About Us</a>
+                <a href="#products" class="nav-link" data-i18n="products">Products</a>
+                <a href="#certificates" class="nav-link" data-i18n="certificates">Certificates</a>
+                <a href="#news" class="nav-link" data-i18n="news">News</a>
+                <a href="#download" class="nav-link" data-i18n="download">Download</a>
+                <a href="#contact" class="nav-link" data-i18n="contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn-search" onclick="toggleSearch()" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="btn-mobile-menu" onclick="toggleMobileMenu()" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Search overlay -->
+        <div class="search-overlay" id="searchOverlay">
+            <div class="search-box">
+                <input type="text" data-i18n="search" placeholder="Search..." class="search-input" id="searchInput">
+                <button class="search-close" onclick="toggleSearch()"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== Hero Banner Slider ===== -->
+    <section class="hero" id="home">
+        <div class="slider" id="heroSlider">
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <div class="slide-bg" style="background: linear-gradient(135deg, rgba(10,22,40,0.7) 0%, rgba(26,58,92,0.6) 50%, rgba(13,33,55,0.7) 100%), url('images/BANNER1_精密工程.png') center/cover no-repeat;"></div>
+                <div class="slide-particles" id="particles1"></div>
+                <div class="slide-content container">
+                    <div class="slide-text">
+                        <span class="slide-tag">YISHUI Tools</span>
+                        <h1 data-i18n="heroTitle1">Professional Diamond Tools Manufacturer</h1>
+                        <p data-i18n="heroDesc1">Over 20 years of experience in diamond tool manufacturing, ISO9001 certified, exported to 50+ countries worldwide.</p>
+                        <div class="slide-btns">
+                            <a href="#products" class="btn btn-primary" data-i18n="products">Products</a>
+                            <a href="#contact" class="btn btn-outline" data-i18n="contactUs">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="slide-image">
+                        <div class="hero-product-showcase">
+                            <div class="hero-blade hero-blade-1"><i class="fas fa-circle-notch"></i></div>
+                            <div class="hero-blade hero-blade-2"><i class="fas fa-circle"></i></div>
+                            <div class="hero-blade hero-blade-3"><i class="fas fa-dharmachakra"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="slide-bg" style="background: linear-gradient(135deg, rgba(15,32,39,0.65) 0%, rgba(32,58,67,0.55) 50%, rgba(44,83,100,0.65) 100%), url('images/BANNER2_工厂实景.png') center/cover no-repeat;"></div>
+                <div class="slide-particles" id="particles2"></div>
+                <div class="slide-content container">
+                    <div class="slide-text">
+                        <span class="slide-tag">Premium Quality</span>
+                        <h1 data-i18n="heroTitle2">High Quality Saw Blades & Grinding Wheels</h1>
+                        <p data-i18n="heroDesc2">Premium quality diamond tools for stone, ceramic, concrete, granite, and marble processing. Trusted by professionals worldwide.</p>
+                        <div class="slide-btns">
+                            <a href="#products" class="btn btn-primary" data-i18n="viewAll">View All</a>
+                            <a href="#about" class="btn btn-outline" data-i18n="about">About Us</a>
+                        </div>
+                    </div>
+                    <div class="slide-image">
+                        <div class="hero-product-showcase">
+                            <div class="hero-blade hero-blade-1"><i class="fas fa-circle-notch"></i></div>
+                            <div class="hero-blade hero-blade-2"><i class="fas fa-circle"></i></div>
+                            <div class="hero-blade hero-blade-3"><i class="fas fa-dharmachakra"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <div class="slide-bg" style="background: linear-gradient(135deg, rgba(26,26,46,0.65) 0%, rgba(22,33,62,0.55) 50%, rgba(15,52,96,0.65) 100%), url('images/BANNER22.jpg') center/cover no-repeat;"></div>
+                <div class="slide-particles" id="particles3"></div>
+                <div class="slide-content container">
+                    <div class="slide-text">
+                        <span class="slide-tag">Innovation</span>
+                        <h1 data-i18n="heroTitle3">Precision Cutting Solutions for Stone & Tile</h1>
+                        <p data-i18n="heroDesc3">Advanced automatic production lines and strict quality inspection ensure every product meets the highest industry standards.</p>
+                        <div class="slide-btns">
+                            <a href="#download" class="btn btn-primary" data-i18n="download">Download</a>
+                            <a href="#contact" class="btn btn-outline" data-i18n="sendMessage">Send Message</a>
+                        </div>
+                    </div>
+                    <div class="slide-image">
+                        <div class="hero-product-showcase">
+                            <div class="hero-blade hero-blade-1"><i class="fas fa-circle-notch"></i></div>
+                            <div class="hero-blade hero-blade-2"><i class="fas fa-circle"></i></div>
+                            <div class="hero-blade hero-blade-3"><i class="fas fa-dharmachakra"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slider Controls -->
+        <button class="slider-arrow slider-prev" onclick="changeSlide(-1)" aria-label="Previous">&#10094;</button>
+        <button class="slider-arrow slider-next" onclick="changeSlide(1)" aria-label="Next">&#10095;</button>
+        <div class="slider-dots" id="sliderDots"></div>
+    </section>
+
+    <!-- ===== About Section ===== -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-i18n="about">About Us</span>
+                <h2 class="section-title" data-i18n="aboutTitle">About YISHUI</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-img-placeholder" style="background: url('images/AI工厂图_金刚石锯片_20260528_164108.png') center/cover no-repeat;">
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-num">20+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">50+</span>
+                            <span class="stat-label">Export Countries</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">10,000</span>
+                            <span class="stat-label">m² Factory Area</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-num">100+</span>
+                            <span class="stat-label">Employees</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p data-i18n="aboutText">YISHUI Tools Co., Ltd. is a high-tech enterprise specializing in the research, development, production and sales of diamond tools. Located in Hebei Province, China, our factory covers an area of over 10,000 square meters with more than 100 skilled employees.</p>
+                    <p data-i18n="aboutText2">We are equipped with advanced automatic and semi-automatic production equipment. Our main products include diamond saw blades, grinding cup wheels, polishing pads and other diamond tools for cutting, grinding and polishing stone, ceramic, concrete, granite, marble and other materials.</p>
+                    <p data-i18n="aboutText3">With strict quality control systems including ISO9001 certification, our products are exported to Europe, America, Middle East, Southeast Asia, Africa and other regions, earning widespread praise from customers worldwide.</p>
+                    <a href="#contact" class="btn btn-primary" data-i18n="contactUs">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Products Section ===== -->
+    <section class="section products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-i18n="products">Products</span>
+                <h2 class="section-title" data-i18n="productsTitle">Our Products</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/product-1.jpg" alt="Saw Blades for Dekton" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="productCat1">Saw Blades for Dekton</h3>
+                        <div class="product-specs">
+                            <span><span data-i18n="productSize">Size</span>: 4.5" (115mm) - 5" (125mm)</span>
+                            <span><span data-i18n="productArbor">Arbor</span>: 22.23mm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/product-2.jpg" alt="Saw Blades for Ceramic" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="productCat2">Saw Blades for Ceramic & Tile</h3>
+                        <div class="product-specs">
+                            <span><span data-i18n="productSize">Size</span>: 4" - 14"</span>
+                            <span><span data-i18n="productArbor">Arbor</span>: 20/22.23/25.4mm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/product-3.jpg" alt="Saw Blades for Stone" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="productCat3">Saw Blades for Stone</h3>
+                        <div class="product-specs">
+                            <span><span data-i18n="productSize">Size</span>: 4" - 16"</span>
+                            <span><span data-i18n="productArbor">Arbor</span>: 22.23/25.4mm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/product-4.JPG" alt="Super Spiral Turbo Blades" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="productCat4">Super Spiral Turbo Blades</h3>
+                        <div class="product-specs">
+                            <span><span data-i18n="productSize">Size</span>: 4.5" (115mm)</span>
+                            <span><span data-i18n="productSegHeight">Segment Height</span>: 10mm</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/product-5.JPG" alt="Saw Blades for Granite" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="productCat5">Saw Blades for Granite</h3>
+                        <div class="product-specs">
+                            <span><span data-i18n="productSize">Size</span>: 4" - 36"</span>
+                            <span><span data-i18n="productApp">Application</span>: Granite cutting</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/product-6.jpg" alt="Saw Blades for Marble" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="productCat6">Saw Blades for Marble</h3>
+                        <div class="product-specs">
+                            <span><span data-i18n="productSize">Size</span>: 4" - 24"</span>
+                            <span><span data-i18n="productApp">Application</span>: Marble cutting</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/product-7.JPG" alt="Blades for Concrete & Asphalt" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="productCat7">Blades for Concrete & Asphalt</h3>
+                        <div class="product-specs">
+                            <span><span data-i18n="productSize">Size</span>: 12" - 48"</span>
+                            <span><span data-i18n="productApp">Application</span>: Concrete/Asphalt</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/product-8.JPG" alt="Construction Blades" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="productCat8">Construction Blades</h3>
+                        <div class="product-specs">
+                            <span><span data-i18n="productSize">Size</span>: 4" - 14"</span>
+                            <span><span data-i18n="productApp">Application</span>: General construction</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/product-9.JPG" alt="Grinding Cup Wheels" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="productCat9">Grinding Cup Wheels</h3>
+                        <div class="product-specs">
+                            <span><span data-i18n="productSize">Size</span>: 4" - 7"</span>
+                            <span><span data-i18n="productApp">Application</span>: Grinding & smoothing</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="images/product-10.JPG" alt="Polishing Pads" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3 data-i18n="productCat10">Polishing Pads</h3>
+                        <div class="product-specs">
+                            <span><span data-i18n="productSize">Size</span>: 3" - 7"</span>
+                            <span><span data-i18n="productApp">Application</span>: Stone polishing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Certificates Section ===== -->
+    <section class="section certificates" id="certificates">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-i18n="certificates">Certificates</span>
+                <h2 class="section-title" data-i18n="certTitle">Certificates</h2>
+                <div class="section-divider"></div>
+                <p class="section-desc" data-i18n="certText">Our quality management system is certified to international standards, ensuring consistent product quality and reliability.</p>
+            </div>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-certificate"></i></div>
+                    <h3>ISO 9001:2015</h3>
+                    <p>Quality Management System</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>CE Certification</h3>
+                    <p>European Conformity</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-check-double"></i></div>
+                    <h3>BV Certification</h3>
+                    <p>Bureau Veritas Certified</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><i class="fas fa-globe-americas"></i></div>
+                    <h3>MPA Certification</h3>
+                    <p>Material Testing Certified</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== News Section ===== -->
+    <section class="section news" id="news">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-i18n="news">News</span>
+                <h2 class="section-title" data-i18n="newsTitle">Latest News</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="news-grid">
+                <div class="news-card">
+                    <div class="news-img">
+                        <i class="fas fa-calendar-check"></i>
+                        <span class="news-date">Apr 12, 2026</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>BIG 5 CONSTRUCT South Africa 2026</h3>
+                        <p>Visit YISHUI Tools at BIG 5 CONSTRUCT South Africa. Discover our latest diamond tools.</p>
+                        <a href="#" class="news-link" data-i18n="readMore">Read More →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-img">
+                        <i class="fas fa-calendar-check"></i>
+                        <span class="news-date">Oct 15, 2025</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>139th Canton Fair Exhibition</h3>
+                        <p>YISHUI Tools successfully exhibited at the 139th Canton Fair, connecting with global buyers.</p>
+                        <a href="#" class="news-link" data-i18n="readMore">Read More →</a>
+                    </div>
+                </div>
+                <div class="news-card">
+                    <div class="news-img">
+                        <i class="fas fa-calendar-check"></i>
+                        <span class="news-date">Sep 08, 2025</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>Dubai BIG 5 International Exhibition</h3>
+                        <p>Showcasing our premium diamond tools at the Dubai BIG 5 exhibition. Meeting with partners.</p>
+                        <a href="#" class="news-link" data-i18n="readMore">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Download Section ===== -->
+    <section class="section download" id="download">
+        <div class="container">
+            <div class="download-box">
+                <div class="download-icon">
+                    <i class="fas fa-file-pdf"></i>
+                </div>
+                <h2 data-i18n="downloadTitle">Download</h2>
+                <p data-i18n="downloadText">Download our latest product catalog to learn more about our full range of diamond tools.</p>
+                <a href="#" class="btn btn-primary btn-lg">
+                    <i class="fas fa-download"></i> <span data-i18n="downloadBtn">Download Catalog</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Contact Section ===== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" data-i18n="contact">Contact</span>
+                <h2 class="section-title" data-i18n="contactTitle">Get In Touch</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-info-card">
+                        <div class="contact-icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4 data-i18n="contactAddress">Address</h4>
+                            <p data-i18n="contactAddrVal">Xingtang County, Shijiazhuang, Hebei Province, China</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon-circle"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4 data-i18n="contactPhone">Phone</h4>
+                            <p>18369576279</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon-circle"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4 data-i18n="contactEmail">Email</h4>
+                            <p>2289894015@qq.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="contact-icon-circle"><i class="fab fa-whatsapp"></i></div>
+                        <div>
+                            <h4 data-i18n="contactWhatsApp">WhatsApp</h4>
+                            <p>+86 18369576279</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrap">
+                    <form class="contact-form" id="contactForm" onsubmit="handleContactSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" required data-i18n="contactFormName" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="email" required data-i18n="contactFormEmail" placeholder="Your Email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" data-i18n="contactFormPhone" placeholder="Your Phone">
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" required data-i18n="contactFormMsg" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" data-i18n="contactFormSubmit">Submit</button>
+                    </form>
+                    <div class="form-success" id="formSuccess" style="display:none;">
+                        <i class="fas fa-check-circle"></i>
+                        <span data-i18n="contactFormSuccess">Thank you! Your message has been sent.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon"><i class="fas fa-cog"></i></div>
+                        <span class="footer-company">YISHUI</span>
+                    </div>
+                    <p data-i18n="footerAbout">YISHUI Tools is a professional manufacturer of diamond tools, committed to providing high-quality cutting, grinding and polishing solutions.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footerLinks">Quick Links</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="home">Home</a></li>
+                        <li><a href="#about" data-i18n="about">About Us</a></li>
+                        <li><a href="#products" data-i18n="products">Products</a></li>
+                        <li><a href="#certificates" data-i18n="certificates">Certificates</a></li>
+                        <li><a href="#news" data-i18n="news">News</a></li>
+                        <li><a href="#contact" data-i18n="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footerProducts">Products</h4>
+                    <ul>
+                        <li><a href="#products" data-i18n="productCat2">Saw Blades for Ceramic & Tile</a></li>
+                        <li><a href="#products" data-i18n="productCat3">Saw Blades for Stone</a></li>
+                        <li><a href="#products" data-i18n="productCat5">Saw Blades for Granite</a></li>
+                        <li><a href="#products" data-i18n="productCat9">Grinding Cup Wheels</a></li>
+                        <li><a href="#products" data-i18n="productCat10">Polishing Pads</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footerNewsletter">Newsletter</h4>
+                    <p data-i18n="footerNewsletterText">Subscribe for latest products and news.</p>
+                    <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                        <div class="newsletter-input-wrap">
+                            <input type="email" required data-i18n="footerEmailPlaceholder" placeholder="Your email address">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footerCopyright">© 2026 YISHUI Tools Co., Ltd. All Rights Reserved.</p>
+                <p data-i18n="footerPowered">Powered by YISHUI</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== Chat Widget ===== -->
+    <div class="chat-widget">
+        <button class="chat-toggle" onclick="toggleChat()" aria-label="Chat">
+            <i class="fas fa-comments"></i>
+            <span class="chat-badge" data-i18n="chatOnline">Online</span>
+        </button>
+        <div class="chat-box" id="chatBox">
+            <div class="chat-header">
+                <h4 data-i18n="chatWithUs">Chat with Us</h4>
+                <button class="chat-close" onclick="toggleChat()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-body">
+                <div class="chat-message chat-bot">
+                    <p data-i18n="chatLeaveMsg">Leave a message, we will reply soon!</p>
+                </div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" placeholder="Type your message...">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Back to Top ===== -->
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
