@@ -305,6 +305,10 @@ img {
     display: none;
 }
 
+.lang-menu-mobile {
+    display: none;
+}
+
 /* Search Overlay */
 .search-overlay {
     display: none;
