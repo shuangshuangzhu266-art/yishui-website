@@ -1,5 +1,5 @@
 /**
- * YISHUI Tools Website - Main JavaScript
+ * HELIDA Tools Website - Main JavaScript
  */
 
 // ===== Hero Slider =====
