@@ -70,12 +70,30 @@
                 <a href="#contact" class="nav-link" data-i18n="contact">Contact</a>
             </nav>
             <div class="nav-actions">
+                <button class="btn-lang-mobile" onclick="toggleLangMenuMobile()" aria-label="Language" data-i18n="langBtnMobile">
+                    <i class="fas fa-globe"></i>
+                </button>
                 <button class="btn-search" onclick="toggleSearch()" aria-label="Search">
                     <i class="fas fa-search"></i>
                 </button>
                 <button class="btn-mobile-menu" onclick="toggleMobileMenu()" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
+            </div>
+            <!-- Mobile Language Menu -->
+            <div class="lang-menu-mobile" id="langMenuMobile">
+                <a href="#" onclick="setLanguage('en');toggleLangMenuMobile();return false;">English</a>
+                <a href="#" onclick="setLanguage('zh');toggleLangMenuMobile();return false;">中文</a>
+                <a href="#" onclick="setLanguage('ar');toggleLangMenuMobile();return false;">العربية</a>
+                <a href="#" onclick="setLanguage('es');toggleLangMenuMobile();return false;">Español</a>
+                <a href="#" onclick="setLanguage('ru');toggleLangMenuMobile();return false;">Русский</a>
+                <a href="#" onclick="setLanguage('pt');toggleLangMenuMobile();return false;">Português</a>
+                <a href="#" onclick="setLanguage('fr');toggleLangMenuMobile();return false;">Français</a>
+                <a href="#" onclick="setLanguage('de');toggleLangMenuMobile();return false;">Deutsch</a>
+                <a href="#" onclick="setLanguage('ja');toggleLangMenuMobile();return false;">日本語</a>
+                <a href="#" onclick="setLanguage('ko');toggleLangMenuMobile();return false;">한국어</a>
+                <a href="#" onclick="setLanguage('hi');toggleLangMenuMobile();return false;">हिन्दी</a>
+                <a href="#" onclick="setLanguage('th');toggleLangMenuMobile();return false;">ไทย</a>
             </div>
         </div>
         <!-- Search overlay -->

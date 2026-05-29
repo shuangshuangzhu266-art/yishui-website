@@ -52,12 +52,21 @@ function toggleLangMenu() {
     document.getElementById('langMenu').classList.toggle('show');
 }
 
+function toggleLangMenuMobile() {
+    document.getElementById('langMenuMobile').classList.toggle('show');
+}
+
 // Close lang menu when clicking outside
 document.addEventListener('click', function(e) {
     const menu = document.getElementById('langMenu');
     const btn = document.getElementById('langCurrent');
     if (menu && btn && !btn.contains(e.target) && !menu.contains(e.target)) {
         menu.classList.remove('show');
+    }
+    const menuMobile = document.getElementById('langMenuMobile');
+    const btnMobile = document.querySelector('.btn-lang-mobile');
+    if (menuMobile && btnMobile && !btnMobile.contains(e.target) && !menuMobile.contains(e.target)) {
+        menuMobile.classList.remove('show');
     }
 });
 
@@ -213,6 +222,7 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         document.getElementById('searchOverlay').classList.remove('show');
         document.getElementById('langMenu').classList.remove('show');
+        document.getElementById('langMenuMobile').classList.remove('show');
         document.getElementById('nav').classList.remove('show');
     }
     if (e.key === 'ArrowLeft') changeSlide(-1);

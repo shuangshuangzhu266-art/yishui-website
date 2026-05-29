@@ -277,7 +277,7 @@ img {
     gap: 8px;
 }
 
-.btn-search, .btn-mobile-menu {
+.btn-search, .btn-mobile-menu, .btn-lang-mobile {
     width: 40px;
     height: 40px;
     border: none;
@@ -292,12 +292,16 @@ img {
     transition: var(--transition);
 }
 
-.btn-search:hover, .btn-mobile-menu:hover {
+.btn-search:hover, .btn-mobile-menu:hover, .btn-lang-mobile:hover {
     background: var(--primary);
     color: var(--white);
 }
 
 .btn-mobile-menu {
+    display: none;
+}
+
+.btn-lang-mobile {
     display: none;
 }
 
@@ -1645,6 +1649,41 @@ html[dir="rtl"] .back-to-top {
 
     .btn-mobile-menu {
         display: flex;
+    }
+
+    .btn-lang-mobile {
+        display: flex;
+    }
+
+    .lang-menu-mobile {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 48px;
+        margin-top: 8px;
+        background: var(--white);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow-lg);
+        min-width: 160px;
+        max-height: 340px;
+        overflow-y: auto;
+        z-index: 1003;
+    }
+
+    .lang-menu-mobile.show { display: block; }
+
+    .lang-menu-mobile a {
+        display: block;
+        padding: 12px 18px;
+        color: var(--gray-800);
+        font-size: 14px;
+        border-bottom: 1px solid var(--gray-100);
+        text-decoration: none;
+    }
+
+    .lang-menu-mobile a:hover {
+        background: var(--gray-50);
+        color: var(--primary);
     }
 
     .hero {
