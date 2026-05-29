@@ -81,10 +81,7 @@ function toggleSearch() {
     }
 }
 
-// ===== Chat Widget =====
-function toggleChat() {
-    document.getElementById('chatBox').classList.toggle('show');
-}
+// ===== Chat Widget (powered by Tawk.to) =====
 
 // ===== Back to Top =====
 function scrollToTop() {
@@ -216,7 +213,6 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         document.getElementById('searchOverlay').classList.remove('show');
         document.getElementById('langMenu').classList.remove('show');
-        document.getElementById('chatBox').classList.remove('show');
         document.getElementById('nav').classList.remove('show');
     }
     if (e.key === 'ArrowLeft') changeSlide(-1);
