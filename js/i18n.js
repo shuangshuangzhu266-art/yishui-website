@@ -101,6 +101,7 @@ const i18n = {
     footerCopyright: '© 2026 HELIDA Tools Co., Ltd. All Rights Reserved.',
     footerPowered: 'Powered by HELIDA',
     // Chat
+    inquiryAbout: 'Inquiring About',
     chatWithUs: 'Chat with Us',
     chatOnline: 'Online',
     chatOffline: 'Offline',
@@ -196,6 +197,7 @@ const i18n = {
     footerEmailPlaceholder: '请输入邮箱地址',
     footerCopyright: '© 2026 HELIDA 工具有限公司 版权所有。',
     footerPowered: '技术支持 HELIDA',
+    inquiryAbout: '正在询价',
     chatWithUs: '在线咨询',
     chatOnline: '在线',
     chatOffline: '离线',

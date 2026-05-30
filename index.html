@@ -477,10 +477,26 @@
                     </div>
                 </div>
                 <div class="contact-form-wrap">
+                    <!-- Product Inquiry Indicator -->
+                    <div class="inquiry-product" id="inquiryProduct" style="display:none">
+                        <div class="inquiry-header">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span data-i18n="inquiryAbout">Inquiring About</span>
+                        </div>
+                        <div class="inquiry-card">
+                            <img id="inquiryImg" src="" alt="">
+                            <div class="inquiry-info">
+                                <strong id="inquiryTitle"></strong>
+                                <span id="inquirySize"></span>
+                            </div>
+                            <button class="inquiry-remove" onclick="clearInquiry()" title="Remove">×</button>
+                        </div>
+                    </div>
                     <form class="contact-form" id="contactForm" action="https://formsubmit.co/2289894015@qq.com" method="POST">
                         <input type="hidden" name="_subject" value="HELIDA Website - New Inquiry">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_next" value="https://www.helida-tools.com/#contact">
+                        <input type="hidden" name="Product" id="inquiryProductField" value="">
                         <div class="form-row">
                             <div class="form-group">
                                 <input type="text" name="Name" required data-i18n="contactFormName" placeholder="Your Name">

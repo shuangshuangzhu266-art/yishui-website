@@ -1250,6 +1250,80 @@ img {
     margin-bottom: 16px;
 }
 
+/* ===== Product Inquiry Indicator ===== */
+.inquiry-product {
+    background: linear-gradient(135deg, rgba(26,95,138,0.05), rgba(230,126,34,0.08));
+    border: 1px dashed var(--primary);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 16px;
+    animation: fadeInUp 0.3s ease;
+}
+.inquiry-header {
+    font-size: 13px;
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.inquiry-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    padding: 10px 14px;
+    position: relative;
+}
+.inquiry-card img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 4px;
+    border: 1px solid var(--gray-200);
+    background: var(--gray-50);
+    flex-shrink: 0;
+}
+.inquiry-info {
+    flex: 1;
+    min-width: 0;
+}
+.inquiry-info strong {
+    display: block;
+    font-size: 14px;
+    color: var(--dark);
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.inquiry-info span {
+    font-size: 12px;
+    color: var(--gray-600);
+}
+.inquiry-remove {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    background: #fff;
+    color: #999;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s;
+}
+.inquiry-remove:hover {
+    background: #fee;
+    border-color: #fcc;
+    color: #e74c3c;
+}
+
 /* ===== Footer ===== */
 .footer {
     background: var(--dark);
