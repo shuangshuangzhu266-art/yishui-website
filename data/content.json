@@ -454,7 +454,7 @@
                                   },
                          "items":  [
                                        {
-                                           "image":  "images/product-5.JPG",
+                                           "image":  "images/product-5.jpg",
                                            "title":  {
                                                          "en":  "Granite Saw Blade",
                                                          "zh":  "花岗岩锯片"
@@ -501,7 +501,7 @@
                                   },
                          "items":  [
                                        {
-                                           "image":  "images/product-7.JPG",
+                                           "image":  "images/product-7.jpg",
                                            "title":  {
                                                          "en":  "Concrete Cutting Blade",
                                                          "zh":  "混凝土切割片"
@@ -512,7 +512,7 @@
                                                     }
                                        },
                                        {
-                                           "image":  "images/product-8.JPG",
+                                           "image":  "images/product-8.jpg",
                                            "title":  {
                                                          "en":  "General Construction Blade",
                                                          "zh":  "通用建筑切割片"
@@ -548,7 +548,7 @@
                                   },
                          "items":  [
                                        {
-                                           "image":  "images/product-9.JPG",
+                                           "image":  "images/product-9.jpg",
                                            "title":  {
                                                          "en":  "Diamond Grinding Cup Wheel",
                                                          "zh":  "金刚石磨轮"
@@ -559,7 +559,7 @@
                                                     }
                                        },
                                        {
-                                           "image":  "images/product-10.JPG",
+                                           "image":  "images/product-10.jpg",
                                            "title":  {
                                                          "en":  "Diamond Polishing Pad",
                                                          "zh":  "金刚石抛光垫"
@@ -663,3 +663,4 @@
                },
     "version":  1
 }
+
