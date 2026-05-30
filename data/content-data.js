@@ -143,28 +143,6 @@
                                   },
                          "items":  [
                                        {
-                                           "image":  "images/product-4.JPG",
-                                           "title":  {
-                                                         "en":  "Super Spiral Turbo Blade",
-                                                         "zh":  "超螺旋涡轮片"
-                                                     },
-                                           "size":  {
-                                                        "en":  "Size: 4.5\" (115mm)",
-                                                        "zh":  "尺寸: 4.5\" (115mm)"
-                                                    }
-                                       },
-                                       {
-                                           "image":  "images/product-2.jpg",
-                                           "title":  {
-                                                         "en":  "Tile \u0026 Ceramic Turbo Blade",
-                                                         "zh":  "瓷砖陶瓷涡轮片"
-                                                     },
-                                           "size":  {
-                                                        "en":  "Size: 4\" - 14\"",
-                                                        "zh":  "尺寸: 4\" - 14\""
-                                                    }
-                                       },
-                                       {
                                            "image":  "images/wave-blade/432.jpg",
                                            "title":  {
                                                          "en":  "Turbo Wave Diamond Blade 4in (105mm) Ceramic Tile Dry Cut",
