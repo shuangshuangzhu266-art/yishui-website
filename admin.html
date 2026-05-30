@@ -1051,16 +1051,16 @@ function renderProducts() {
                     <div class="form-row">
                         <div class="form-group">
                             <label>产品名称</label>
-                            <input type="text" value="${getText(item.title)}" oninput="setText(item.title, this.value)">
+                            <input type="text" value="${getText(item.title)}" oninput="setText(content.products[${ci}].items[${ii}].title, this.value)">
                         </div>
                         <div class="form-group">
                             <label>规格</label>
-                            <input type="text" value="${getText(item.size)}" oninput="setText(item.size, this.value)">
+                            <input type="text" value="${getText(item.size)}" oninput="setText(content.products[${ci}].items[${ii}].size, this.value)">
                         </div>
                     </div>
                     <div class="form-group">
                         <label>图片路径/URL</label>
-                        <input type="text" value="${imgSrc}" placeholder="输入图片路径，如 images/my-product.jpg" oninput="item.image = this.value; updateProdImg(${ci},${ii}, this.value)">
+                        <input type="text" value="${imgSrc}" placeholder="输入图片路径，如 images/my-product.jpg" oninput="content.products[${ci}].items[${ii}].image = this.value; updateProdImg(${ci},${ii}, this.value)">
                     </div>
                     <button class="btn btn-danger btn-sm" onclick="removeProductItem(${ci},${ii})"><i class="fas fa-trash"></i> 删除此产品</button>
                 </div>
