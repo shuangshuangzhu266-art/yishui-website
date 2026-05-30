@@ -1013,6 +1013,8 @@ function setLanguage(lang) {
     // Update lang switcher display
     const langBtn = document.getElementById('langCurrent');
     if (langBtn) langBtn.textContent = i18n[lang].langName;
+    // Notify content loader of language change
+    window.dispatchEvent(new CustomEvent('contentLangChanged', { detail: { lang: lang } }));
   }
 }
 

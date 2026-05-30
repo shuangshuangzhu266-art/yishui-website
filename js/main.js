@@ -5,12 +5,17 @@
 // ===== Hero Slider =====
 let currentSlide = 0;
 let slideInterval;
-const totalSlides = document.querySelectorAll('.slide').length;
+let totalSlides = 0;
 
 function initSlider() {
+    totalSlides = document.querySelectorAll('.slide').length;
     if (totalSlides <= 1) return;
     // Create dots
     const dotsContainer = document.getElementById('sliderDots');
+    if (!dotsContainer) return;
+    // Clear existing dots
+    dotsContainer.innerHTML = '';
+    currentSlide = 0;
     for (let i = 0; i < totalSlides; i++) {
         const dot = document.createElement('button');
         dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
@@ -18,6 +23,8 @@ function initSlider() {
         dot.onclick = function() { goToSlide(i); };
         dotsContainer.appendChild(dot);
     }
+    // Auto-start (don't create duplicate intervals)
+    if (slideInterval) clearInterval(slideInterval);
     startAutoSlide();
 }
 
@@ -213,8 +220,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // ===== Initialize =====
 document.addEventListener('DOMContentLoaded', function() {
-    initSlider();
     updateActiveNav();
+    // Slider will init after content loader finishes (or immediately if no content loader)
+    if (window.isContentReady && window.isContentReady()) {
+        initSlider();
+    }
+});
+
+// Re-initialize slider when content is loaded by content-loader
+window.addEventListener('contentReady', function() {
+    initSlider();
 });
 
 // ===== Keyboard navigation =====

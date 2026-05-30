@@ -1,0 +1,686 @@
+﻿window.DEFAULT_CONTENT = {
+    "banner":  {
+                   "slides":  [
+                                  {
+                                      "image":  "images/banner-slide1.jpg",
+                                      "tag":  {
+                                                  "en":  "HELIDA Tools",
+                                                  "zh":  "HELIDA 工具"
+                                              },
+                                      "title":  {
+                                                    "en":  "Professional Diamond Tools Manufacturer",
+                                                    "zh":  "专业金刚石工具制造商"
+                                                },
+                                      "desc":  {
+                                                   "en":  "Over 20 years of experience in diamond tool manufacturing, ISO9001 certified, exported to 50+ countries worldwide.",
+                                                   "zh":  "20多年金刚石工具制造经验，ISO9001认证，产品出口全球50多个国家。"
+                                               },
+                                      "btn1Text":  {
+                                                       "en":  "Products",
+                                                       "zh":  "产品中心"
+                                                   },
+                                      "btn1Link":  "#products",
+                                      "btn2Text":  {
+                                                       "en":  "Contact Us",
+                                                       "zh":  "联系我们"
+                                                   },
+                                      "btn2Link":  "#contact"
+                                  },
+                                  {
+                                      "image":  "images/banner-slide2.jpg",
+                                      "tag":  {
+                                                  "en":  "Premium Quality",
+                                                  "zh":  "卓越品质"
+                                              },
+                                      "title":  {
+                                                    "en":  "High Quality Saw Blades \u0026 Grinding Wheels",
+                                                    "zh":  "高品质锯片和磨轮"
+                                                },
+                                      "desc":  {
+                                                   "en":  "Premium quality diamond tools for stone, ceramic, concrete, granite, and marble processing. Trusted by professionals worldwide.",
+                                                   "zh":  "优质金刚石工具，适用于石材、陶瓷、混凝土、花岗岩、大理石加工，深受全球专业人士信赖。"
+                                               },
+                                      "btn1Text":  {
+                                                       "en":  "View All",
+                                                       "zh":  "查看全部"
+                                                   },
+                                      "btn1Link":  "#products",
+                                      "btn2Text":  {
+                                                       "en":  "About Us",
+                                                       "zh":  "关于我们"
+                                                   },
+                                      "btn2Link":  "#about"
+                                  },
+                                  {
+                                      "image":  "images/banner-slide3.jpg",
+                                      "tag":  {
+                                                  "en":  "Innovation",
+                                                  "zh":  "创新技术"
+                                              },
+                                      "title":  {
+                                                    "en":  "Precision Cutting Solutions for Stone \u0026 Tile",
+                                                    "zh":  "石材和瓷砖精密切割方案"
+                                                },
+                                      "desc":  {
+                                                   "en":  "Advanced automatic production lines and strict quality inspection ensure every product meets the highest industry standards.",
+                                                   "zh":  "先进的自动化生产线和严格的质量检测，确保每件产品达到最高行业标准。"
+                                               },
+                                      "btn1Text":  {
+                                                       "en":  "Download",
+                                                       "zh":  "下载中心"
+                                                   },
+                                      "btn1Link":  "#download",
+                                      "btn2Text":  {
+                                                       "en":  "Send Message",
+                                                       "zh":  "发送消息"
+                                                   },
+                                      "btn2Link":  "#contact"
+                                  }
+                              ]
+               },
+    "about":  {
+                  "image":  "images/8c5a721ac402b187a6657e89af2c5715.jpg",
+                  "title":  {
+                                "en":  "About HELIDA",
+                                "zh":  "关于 HELIDA"
+                            },
+                  "texts":  [
+                                {
+                                    "en":  "HELIDA Tools Co., Ltd. is a high-tech enterprise specializing in the research, development, production and sales of diamond tools. Located in Hebei Province, China, our factory covers an area of over 10,000 square meters with more than 100 skilled employees.",
+                                    "zh":  "HELIDA 工具有限公司是一家集研发、生产、销售于一体的高新技术企业。公司位于中国河北省，工厂占地面积超过10000平方米，拥有100多名技术娴熟的员工。"
+                                },
+                                {
+                                    "en":  "We are equipped with advanced automatic and semi-automatic production equipment. Our main products include diamond saw blades, grinding cup wheels, polishing pads and other diamond tools for cutting, grinding and polishing stone, ceramic, concrete, granite, marble and other materials.",
+                                    "zh":  "我们配备先进的自动化和半自动化生产设备。主要产品包括金刚石锯片、磨轮、抛光垫等金刚石工具，用于切割、打磨和抛光石材、陶瓷、混凝土、花岗岩、大理石等材料。"
+                                },
+                                {
+                                    "en":  "With strict quality control systems including ISO9001 certification, our products are exported to Europe, America, Middle East, Southeast Asia, Africa and other regions, earning widespread praise from customers worldwide.",
+                                    "zh":  "凭借包括ISO9001认证在内的严格质量控制体系，我们的产品远销欧洲、美洲、中东、东南亚、非洲等地区，赢得了全球客户的广泛赞誉。"
+                                }
+                            ],
+                  "stats":  [
+                                {
+                                    "num":  "20+",
+                                    "label":  {
+                                                  "en":  "Years Experience",
+                                                  "zh":  "年经验"
+                                              }
+                                },
+                                {
+                                    "num":  "50+",
+                                    "label":  {
+                                                  "en":  "Export Countries",
+                                                  "zh":  "出口国家"
+                                              }
+                                },
+                                {
+                                    "num":  "10,000",
+                                    "label":  {
+                                                  "en":  "m² Factory Area",
+                                                  "zh":  "平方米厂房"
+                                              }
+                                },
+                                {
+                                    "num":  "100+",
+                                    "label":  {
+                                                  "en":  "Employees",
+                                                  "zh":  "员工人数"
+                                              }
+                                }
+                            ]
+              },
+    "products":  [
+                     {
+                         "id":  "turbo-blades",
+                         "icon":  "fa-fan",
+                         "title":  {
+                                       "en":  "Turbo Blades",
+                                       "zh":  "涡轮片"
+                                   },
+                         "desc":  {
+                                      "en":  "Fast-cutting turbo diamond blades for tile, ceramic, porcelain, and multi-purpose dry/wet cutting.",
+                                      "zh":  "快速切割涡轮金刚石锯片，适用于瓷砖、陶瓷、岩板的干湿切割。"
+                                  },
+                         "items":  [
+                                       {
+                                           "image":  "images/product-4.JPG",
+                                           "title":  {
+                                                         "en":  "Super Spiral Turbo Blade",
+                                                         "zh":  "超螺旋涡轮片"
+                                                     },
+                                           "size":  {
+                                                        "en":  "Size: 4.5\" (115mm)",
+                                                        "zh":  "尺寸: 4.5\" (115mm)"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/product-2.jpg",
+                                           "title":  {
+                                                         "en":  "Tile \u0026 Ceramic Turbo Blade",
+                                                         "zh":  "瓷砖陶瓷涡轮片"
+                                                     },
+                                           "size":  {
+                                                        "en":  "Size: 4\" - 14\"",
+                                                        "zh":  "尺寸: 4\" - 14\""
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/432.jpg",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 4in (105mm) Ceramic Tile Dry Cut",
+                                                         "zh":  "金刚石涡轮波纹片 4寸105mm 瓷砖干切"
+                                                     },
+                                           "size":  {
+                                                        "en":  "4in (105mm) x 1.2mm x 20mm Arbor",
+                                                        "zh":  "4寸 105mm × 1.2mm × 20mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1074.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 4in (105mm) Porcelain Wet Cut",
+                                                         "zh":  "金刚石涡轮波纹片 4寸105mm 陶瓷湿切"
+                                                     },
+                                           "size":  {
+                                                        "en":  "4in (105mm) x 1.4mm x 20mm Arbor",
+                                                        "zh":  "4寸 105mm × 1.4mm × 20mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1075.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 4in (105mm) Dekton Ultra Thin",
+                                                         "zh":  "金刚石涡轮波纹片 4寸105mm 岩板超薄切割"
+                                                     },
+                                           "size":  {
+                                                        "en":  "4in (105mm) x 1.0mm x 20mm Arbor",
+                                                        "zh":  "4寸 105mm × 1.0mm × 20mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1076.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 4.5in (115mm) Tile Porcelain Universal",
+                                                         "zh":  "金刚石涡轮波纹片 4.5寸115mm 瓷砖通用型"
+                                                     },
+                                           "size":  {
+                                                        "en":  "4.5in (115mm) x 1.4mm x 22.23mm Arbor",
+                                                        "zh":  "4.5寸 115mm × 1.4mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1077.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 4.5in (115mm) Dry Cut No Chipping",
+                                                         "zh":  "金刚石涡轮波纹片 4.5寸115mm 干切不崩边"
+                                                     },
+                                           "size":  {
+                                                        "en":  "4.5in (115mm) x 1.2mm x 22.23mm Arbor",
+                                                        "zh":  "4.5寸 115mm × 1.2mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1078.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 4.5in (115mm) Wet Cut High Speed",
+                                                         "zh":  "金刚石涡轮波纹片 4.5寸115mm 湿切高速型"
+                                                     },
+                                           "size":  {
+                                                        "en":  "4.5in (115mm) x 1.6mm x 22.23mm Arbor",
+                                                        "zh":  "4.5寸 115mm × 1.6mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1079.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 4.5in (115mm) Granite Marble Stone",
+                                                         "zh":  "金刚石涡轮波纹片 4.5寸115mm 花岗岩大理石"
+                                                     },
+                                           "size":  {
+                                                        "en":  "4.5in (115mm) x 1.8mm x 22.23mm Arbor",
+                                                        "zh":  "4.5寸 115mm × 1.8mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1080.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 5in (125mm) Ceramic Porcelain Pro",
+                                                         "zh":  "金刚石涡轮波纹片 5寸125mm 瓷砖陶瓷专业型"
+                                                     },
+                                           "size":  {
+                                                        "en":  "5in (125mm) x 1.4mm x 22.23mm Arbor",
+                                                        "zh":  "5寸 125mm × 1.4mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1081.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 5in (125mm) Dekton Sintered Stone",
+                                                         "zh":  "金刚石涡轮波纹片 5寸125mm 岩板切割专用"
+                                                     },
+                                           "size":  {
+                                                        "en":  "5in (125mm) x 1.2mm x 22.23mm Arbor",
+                                                        "zh":  "5寸 125mm × 1.2mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1082.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 5in (125mm) Multi-Purpose Dry Wet",
+                                                         "zh":  "金刚石涡轮波纹片 5寸125mm 多功能干湿两用"
+                                                     },
+                                           "size":  {
+                                                        "en":  "5in (125mm) x 1.6mm x 22.23mm Arbor",
+                                                        "zh":  "5寸 125mm × 1.6mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1083.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 5in (125mm) Reinforced Core Stone",
+                                                         "zh":  "金刚石涡轮波纹片 5寸125mm 加强芯石材切割"
+                                                     },
+                                           "size":  {
+                                                        "en":  "5in (125mm) x 1.8mm x 22.23mm Arbor",
+                                                        "zh":  "5寸 125mm × 1.8mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1084.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 6in (150mm) Ceramic Tile Standard",
+                                                         "zh":  "金刚石涡轮波纹片 6寸150mm 瓷砖标准型"
+                                                     },
+                                           "size":  {
+                                                        "en":  "6in (150mm) x 1.6mm x 22.23mm Arbor",
+                                                        "zh":  "6寸 150mm × 1.6mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1086.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 6in (150mm) Porcelain High Speed",
+                                                         "zh":  "金刚石涡轮波纹片 6寸150mm 玻化砖高速切割"
+                                                     },
+                                           "size":  {
+                                                        "en":  "6in (150mm) x 1.4mm x 22.23mm Arbor",
+                                                        "zh":  "6寸 150mm × 1.4mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1087.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 6in (150mm) Stone Marble Premium",
+                                                         "zh":  "金刚石涡轮波纹片 6寸150mm 石材大理石优选"
+                                                     },
+                                           "size":  {
+                                                        "en":  "6in (150mm) x 2.0mm x 22.23mm Arbor",
+                                                        "zh":  "6寸 150mm × 2.0mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1088.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 7in (180mm) Ceramic Tile Professional",
+                                                         "zh":  "金刚石涡轮波纹片 7寸180mm 瓷砖专业型"
+                                                     },
+                                           "size":  {
+                                                        "en":  "7in (180mm) x 1.6mm x 22.23mm Arbor",
+                                                        "zh":  "7寸 180mm × 1.6mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1089.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 7in (180mm) Granite Reinforced",
+                                                         "zh":  "金刚石涡轮波纹片 7寸180mm 花岗岩加强型"
+                                                     },
+                                           "size":  {
+                                                        "en":  "7in (180mm) x 2.0mm x 22.23mm Arbor",
+                                                        "zh":  "7寸 180mm × 2.0mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1090.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 7in (180mm) Dekton Ultra Thin Cutting",
+                                                         "zh":  "金刚石涡轮波纹片 7寸180mm 岩板超薄精切"
+                                                     },
+                                           "size":  {
+                                                        "en":  "7in (180mm) x 1.2mm x 22.23mm Arbor",
+                                                        "zh":  "7寸 180mm × 1.2mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1091.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 7in (180mm) Multi-Material Quality",
+                                                         "zh":  "金刚石涡轮波纹片 7寸180mm 多材质通用品质款"
+                                                     },
+                                           "size":  {
+                                                        "en":  "7in (180mm) x 1.8mm x 22.23mm Arbor",
+                                                        "zh":  "7寸 180mm × 1.8mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1092.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 9in (230mm) Large Format Tile",
+                                                         "zh":  "金刚石涡轮波纹片 9寸230mm 大板瓷砖切割"
+                                                     },
+                                           "size":  {
+                                                        "en":  "9in (230mm) x 2.0mm x 22.23mm Arbor",
+                                                        "zh":  "9寸 230mm × 2.0mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1094.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 9in (230mm) Stone Slab Cutting",
+                                                         "zh":  "金刚石涡轮波纹片 9寸230mm 石材大板开料"
+                                                     },
+                                           "size":  {
+                                                        "en":  "9in (230mm) x 2.2mm x 22.23mm Arbor",
+                                                        "zh":  "9寸 230mm × 2.2mm × 22.23mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1095.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 9in (230mm) Construction Heavy Duty",
+                                                         "zh":  "金刚石涡轮波纹片 9寸230mm 工程重载型"
+                                                     },
+                                           "size":  {
+                                                        "en":  "9in (230mm) x 2.4mm x 25.4mm Arbor",
+                                                        "zh":  "9寸 230mm × 2.4mm × 25.4mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1098.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 10in (250mm) Large Porcelain Dekton",
+                                                         "zh":  "金刚石涡轮波纹片 10寸250mm 大规格岩板瓷砖"
+                                                     },
+                                           "size":  {
+                                                        "en":  "10in (250mm) x 2.0mm x 25.4mm Arbor",
+                                                        "zh":  "10寸 250mm × 2.0mm × 25.4mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1099.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 10in (250mm) Granite Marble Pro",
+                                                         "zh":  "金刚石涡轮波纹片 10寸250mm 花岗岩大理石专业"
+                                                     },
+                                           "size":  {
+                                                        "en":  "10in (250mm) x 2.4mm x 25.4mm Arbor",
+                                                        "zh":  "10寸 250mm × 2.4mm × 25.4mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1101.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 10in (250mm) Bridge Saw Machine",
+                                                         "zh":  "金刚石涡轮波纹片 10寸250mm 桥切机专用"
+                                                     },
+                                           "size":  {
+                                                        "en":  "10in (250mm) x 2.6mm x 25.4mm Arbor",
+                                                        "zh":  "10寸 250mm × 2.6mm × 25.4mm 内孔"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1102.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade Multi-Hole Cooling Design",
+                                                         "zh":  "金刚石涡轮波纹片 多孔散热加强设计款"
+                                                     },
+                                           "size":  {
+                                                        "en":  "5in (125mm) x 1.4mm x 22.23mm Multi-Hole",
+                                                        "zh":  "5寸 125mm × 1.4mm × 22.23mm 多孔散热"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1103.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade Silent Core Low Noise",
+                                                         "zh":  "金刚石涡轮波纹片 静音降噪型"
+                                                     },
+                                           "size":  {
+                                                        "en":  "4.5in (115mm) x 1.2mm x 22.23mm Silent",
+                                                        "zh":  "4.5寸 115mm × 1.2mm × 22.23mm 静音型"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/IMG_1105.JPG",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade Super Thin 0.8mm Ultra Fine",
+                                                         "zh":  "金刚石涡轮波纹片 超薄0.8mm 精密切割"
+                                                     },
+                                           "size":  {
+                                                        "en":  "4.5in (115mm) x 0.8mm x 22.23mm Ultra Thin",
+                                                        "zh":  "4.5寸 115mm × 0.8mm × 22.23mm 超薄"
+                                                    }
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "stone-blades",
+                         "icon":  "fa-gem",
+                         "title":  {
+                                       "en":  "Stone Cutting Blades",
+                                       "zh":  "石材切割片"
+                                   },
+                         "desc":  {
+                                      "en":  "Diamond saw blades for granite, marble, quartz, and natural stone. Smooth, chip-free cutting.",
+                                      "zh":  "花岗岩、大理石、石英石及天然石材切割专用金刚石锯片，切割平滑无崩边。"
+                                  },
+                         "items":  [
+                                       {
+                                           "image":  "images/product-5.JPG",
+                                           "title":  {
+                                                         "en":  "Granite Saw Blade",
+                                                         "zh":  "花岗岩锯片"
+                                                     },
+                                           "size":  {
+                                                        "en":  "Size: 4\" - 36\"",
+                                                        "zh":  "尺寸: 4\" - 36\""
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/product-6.jpg",
+                                           "title":  {
+                                                         "en":  "Marble Saw Blade",
+                                                         "zh":  "大理石锯片"
+                                                     },
+                                           "size":  {
+                                                        "en":  "Size: 4\" - 24\"",
+                                                        "zh":  "尺寸: 4\" - 24\""
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/product-3.jpg",
+                                           "title":  {
+                                                         "en":  "Quartz \u0026 Engineered Stone Blade",
+                                                         "zh":  "石英石及人造石锯片"
+                                                     },
+                                           "size":  {
+                                                        "en":  "Size: 4\" - 16\"",
+                                                        "zh":  "尺寸: 4\" - 16\""
+                                                    }
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "concrete-blades",
+                         "icon":  "fa-hard-hat",
+                         "title":  {
+                                       "en":  "Concrete \u0026 Construction Blades",
+                                       "zh":  "混凝土及建筑切割片"
+                                   },
+                         "desc":  {
+                                      "en":  "Heavy-duty diamond blades for concrete, reinforced concrete, asphalt, brick, and general construction.",
+                                      "zh":  "重型金刚石锯片，适用于混凝土、钢筋混凝土、沥青、砖块及建筑施工。"
+                                  },
+                         "items":  [
+                                       {
+                                           "image":  "images/product-7.JPG",
+                                           "title":  {
+                                                         "en":  "Concrete Cutting Blade",
+                                                         "zh":  "混凝土切割片"
+                                                     },
+                                           "size":  {
+                                                        "en":  "Size: 12\" - 48\"",
+                                                        "zh":  "尺寸: 12\" - 48\""
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/product-8.JPG",
+                                           "title":  {
+                                                         "en":  "General Construction Blade",
+                                                         "zh":  "通用建筑切割片"
+                                                     },
+                                           "size":  {
+                                                        "en":  "Size: 4\" - 14\"",
+                                                        "zh":  "尺寸: 4\" - 14\""
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/product-1.jpg",
+                                           "title":  {
+                                                         "en":  "Asphalt Cutting Blade",
+                                                         "zh":  "沥青切割片"
+                                                     },
+                                           "size":  {
+                                                        "en":  "Size: 12\" - 36\"",
+                                                        "zh":  "尺寸: 12\" - 36\""
+                                                    }
+                                       }
+                                   ]
+                     },
+                     {
+                         "id":  "grinding-polishing",
+                         "icon":  "fa-cog",
+                         "title":  {
+                                       "en":  "Grinding \u0026 Polishing",
+                                       "zh":  "打磨及抛光"
+                                   },
+                         "desc":  {
+                                      "en":  "Diamond grinding cup wheels and polishing pads for surface preparation, grinding, and finishing.",
+                                      "zh":  "金刚石磨轮及抛光垫，用于表面找平、打磨及抛光处理。"
+                                  },
+                         "items":  [
+                                       {
+                                           "image":  "images/product-9.JPG",
+                                           "title":  {
+                                                         "en":  "Diamond Grinding Cup Wheel",
+                                                         "zh":  "金刚石磨轮"
+                                                     },
+                                           "size":  {
+                                                        "en":  "Size: 4\" - 7\"",
+                                                        "zh":  "尺寸: 4\" - 7\""
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/product-10.JPG",
+                                           "title":  {
+                                                         "en":  "Diamond Polishing Pad",
+                                                         "zh":  "金刚石抛光垫"
+                                                     },
+                                           "size":  {
+                                                        "en":  "Size: 3\" - 7\"",
+                                                        "zh":  "尺寸: 3\" - 7\""
+                                                    }
+                                       }
+                                   ]
+                     }
+                 ],
+    "certificates":  {
+                         "title":  {
+                                       "en":  "Certificates",
+                                       "zh":  "资质证书"
+                                   },
+                         "desc":  {
+                                      "en":  "Our quality management system is certified to international standards, ensuring consistent product quality and reliability.",
+                                      "zh":  "我们的质量管理体系已通过国际标准认证，确保产品质量和可靠性始终如一。"
+                                  },
+                         "items":  [
+                                       {
+                                           "icon":  "fa-certificate",
+                                           "title":  "ISO 9001:2015",
+                                           "desc":  {
+                                                        "en":  "Quality Management System",
+                                                        "zh":  "质量管理体系"
+                                                    }
+                                       },
+                                       {
+                                           "icon":  "fa-shield-alt",
+                                           "title":  "CE Certification",
+                                           "desc":  {
+                                                        "en":  "European Conformity",
+                                                        "zh":  "欧盟CE认证"
+                                                    }
+                                       },
+                                       {
+                                           "icon":  "fa-check-double",
+                                           "title":  "BV Certification",
+                                           "desc":  {
+                                                        "en":  "Bureau Veritas Certified",
+                                                        "zh":  "必维国际认证"
+                                                    }
+                                       },
+                                       {
+                                           "icon":  "fa-globe-americas",
+                                           "title":  "MPA Certification",
+                                           "desc":  {
+                                                        "en":  "Material Testing Certified",
+                                                        "zh":  "材料检测认证"
+                                                    }
+                                       }
+                                   ]
+                     },
+    "download":  {
+                     "title":  {
+                                   "en":  "Download",
+                                   "zh":  "下载中心"
+                               },
+                     "text":  {
+                                  "en":  "Download our latest product catalog to learn more about our full range of diamond tools.",
+                                  "zh":  "下载我们最新的产品目录，了解更多金刚石工具产品信息。"
+                              },
+                     "btnText":  {
+                                     "en":  "Download Catalog",
+                                     "zh":  "下载产品目录"
+                                 },
+                     "file":  "catalog.pdf"
+                 },
+    "contact":  {
+                    "title":  {
+                                  "en":  "Get In Touch",
+                                  "zh":  "联系我们"
+                              },
+                    "address":  {
+                                    "en":  "Xingtang County, Shijiazhuang, Hebei Province, China",
+                                    "zh":  "河北省石家庄行唐县"
+                                },
+                    "phone":  "16630152768",
+                    "email":  "2289894015@qq.com",
+                    "whatsapp":  "+86 18369576279",
+                    "social":  {
+                                   "facebook":  "https://www.facebook.com/profile.php?id=61585195565123",
+                                   "twitter":  "",
+                                   "instagram":  "https://www.instagram.com/yuanqiucui1/",
+                                   "youtube":  "",
+                                   "linkedin":  ""
+                               }
+                },
+    "footer":  {
+                   "about":  {
+                                 "en":  "HELIDA Tools is a professional manufacturer of diamond tools, committed to providing high-quality cutting, grinding and polishing solutions.",
+                                 "zh":  "HELIDA 工具是专业的金刚石工具制造商，致力于提供高质量的切割、打磨和抛光解决方案。"
+                             },
+                   "newsletterText":  {
+                                          "en":  "Subscribe for latest products and news.",
+                                          "zh":  "订阅以获取最新产品和新闻。"
+                                      }
+               }
+};
