@@ -706,8 +706,19 @@ function saveAllChanges() {
     if (window.DEFAULT_CONTENT && window.DEFAULT_CONTENT.version) {
         content.version = window.DEFAULT_CONTENT.version;
     }
-    localStorage.setItem(CONTENT_KEY, JSON.stringify(content));
-    showToast('✅ 所有更改已保存！网站已更新。刷新首页查看效果。');
+    try {
+        const json = JSON.stringify(content);
+        // Warn if data is getting large (localStorage limit ~5MB)
+        const sizeMB = (new Blob([json]).size / 1024 / 1024).toFixed(2);
+        if (sizeMB > 3) {
+            showToast('⚠️ 数据较大(' + sizeMB + 'MB)，建议使用文件路径而非直接上传图片');
+        }
+        localStorage.setItem(CONTENT_KEY, json);
+        showToast('✅ 所有更改已保存！刷新首页查看效果。');
+    } catch(e) {
+        showToast('❌ 保存失败！可能是图片太大。请使用图片文件路径代替上传。');
+        console.error('Save failed:', e);
+    }
 }
 
 // ===== Language Tabs Helper =====
@@ -955,11 +966,14 @@ function renderProducts() {
             <div class="item-list">
         `;
         cat.items.forEach((item, ii) => {
+            const imgSrc = item.image || '';
+            const imgDisplay = imgSrc
+                ? `<img src="${imgSrc}" alt="${getText(item.title)}"><div class="change-overlay">点击更换</div>`
+                : `<div style="text-align:center;color:var(--text-muted);"><i class="fas fa-image" style="font-size:28px;display:block;margin-bottom:6px;"></i><span style="font-size:11px;">点击上传<br>或输入路径</span></div>`;
             html += `
             <div class="item-card">
                 <div class="item-img" onclick="triggerProductImage(${ci},${ii})" id="prodImg_${ci}_${ii}">
-                    <img src="${item.image}" alt="${getText(item.title)}">
-                    <div class="change-overlay">点击更换</div>
+                    ${imgDisplay}
                 </div>
                 <div class="item-fields">
                     <div class="form-row">
@@ -974,7 +988,7 @@ function renderProducts() {
                     </div>
                     <div class="form-group">
                         <label>图片路径/URL</label>
-                        <input type="text" value="${item.image}" onchange="item.image = this.value; updateProdImg(${ci},${ii}, this.value)">
+                        <input type="text" value="${imgSrc}" placeholder="输入图片路径，如 images/my-product.jpg" onchange="item.image = this.value; updateProdImg(${ci},${ii}, this.value)">
                     </div>
                     <button class="btn btn-danger btn-sm" onclick="removeProductItem(${ci},${ii})"><i class="fas fa-trash"></i> 删除此产品</button>
                 </div>
@@ -987,7 +1001,7 @@ function renderProducts() {
 
 function addProductItem(ci) {
     content.products[ci].items.push({
-        "image": "images/product-1.jpg",
+        "image": "",
         "title": { "en": "New Product", "zh": "新产品" },
         "size": { "en": "Size: Custom", "zh": "尺寸: 定制" }
     });
@@ -1033,8 +1047,11 @@ function triggerProductImage(ci, ii) {
 
 function updateProdImg(ci, ii, src) {
     const el = document.getElementById(`prodImg_${ci}_${ii}`);
-    if (el) {
+    if (!el) return;
+    if (src) {
         el.innerHTML = `<img src="${src}" alt=""><div class="change-overlay">点击更换</div>`;
+    } else {
+        el.innerHTML = `<div style="text-align:center;color:var(--text-muted);"><i class="fas fa-image" style="font-size:28px;display:block;margin-bottom:6px;"></i><span style="font-size:11px;">点击上传<br>或输入路径</span></div>`;
     }
 }
 
