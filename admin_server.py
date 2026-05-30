@@ -87,44 +87,25 @@ class AdminHandler(http.server.SimpleHTTPRequestHandler):
             self.send_json_response({"ok": False, "error": str(e)}, 500)
 
     def handle_upload(self):
-        """上传图片到 images/ 文件夹"""
+        """上传图片到 images/ 文件夹（base64 JSON方式）"""
         try:
-            content_type = self.headers.get("Content-Type", "")
-            if "multipart/form-data" not in content_type:
-                self.send_json_response({"ok": False, "error": "需要 multipart/form-data"}, 400)
-                return
-
-            # 简单解析 multipart
             length = int(self.headers.get("Content-Length", 0))
-            body = self.rfile.read(length)
+            data = json.loads(self.rfile.read(length))
 
-            # 提取文件名和内容
-            # 找 filename="..."
-            body_str = body.decode("latin-1")  # 使用 latin-1 避免解码错误
-            fn_start = body_str.find('filename="')
-            if fn_start == -1:
-                self.send_json_response({"ok": False, "error": "未找到文件"}, 400)
+            filename = data.get("filename", "image.jpg")
+            filename = os.path.basename(filename)
+            b64_data = data.get("data", "")
+
+            if not b64_data:
+                self.send_json_response({"ok": False, "error": "无图片数据"}, 400)
                 return
 
-            fn_start += 10
-            fn_end = body_str.find('"', fn_start)
-            filename = body_str[fn_start:fn_end]
-            filename = os.path.basename(filename)  # 安全：只取文件名
+            # 解码 base64（去掉可能的 data:image/...;base64, 前缀）
+            if "," in b64_data:
+                b64_data = b64_data.split(",", 1)[1]
 
-            # 找文件内容起始 (\r\n\r\n)
-            content_start = body_str.find("\r\n\r\n", fn_end)
-            if content_start == -1:
-                self.send_json_response({"ok": False, "error": "格式错误"}, 400)
-                return
-            content_start += 4
-
-            # 文件内容直到 boundary
-            boundary = body_str[:body_str.find("\r\n")]
-            content_end = body_str.find(boundary, content_start)
-            if content_end == -1:
-                content_end = len(body_str)
-
-            file_data = body[content_start:content_end].rstrip(b"\r\n-")
+            import base64
+            file_data = base64.b64decode(b64_data)
 
             # 保存到 images/ 文件夹
             dest_dir = os.path.join(ROOT, "images")

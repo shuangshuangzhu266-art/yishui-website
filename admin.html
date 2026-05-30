@@ -835,25 +835,33 @@ document.getElementById('imageFileInput').addEventListener('change', function(e)
     if (LOCAL_API) {
         // Upload via local server - saves to images/ folder
         showToast('⏳ 正在上传图片...');
-        const formData = new FormData();
-        formData.append('image', file);
-
-        fetch(LOCAL_API + '/api/upload-image', { method: 'POST', body: formData })
-        .then(r => r.json())
-        .then(result => {
-            if (result.ok) {
-                const imgPath = result.path;
-                const imgId = currentImageCallback.imgId;
-                updateImagePreview(imgId, imgPath);
-                handleImageUpdate(imgId, imgPath);
-                showToast('✅ 图片已保存: ' + imgPath);
-            } else {
-                showToast('❌ 上传失败: ' + (result.error || ''));
-            }
-        })
-        .catch(e => {
-            showToast('❌ 上传失败，请确认本地服务器已启动');
-        });
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+            fetch(LOCAL_API + '/api/upload-image', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    filename: file.name,
+                    data: ev.target.result
+                })
+            })
+            .then(r => r.json())
+            .then(result => {
+                if (result.ok) {
+                    const imgPath = result.path;
+                    const imgId = currentImageCallback.imgId;
+                    updateImagePreview(imgId, imgPath);
+                    handleImageUpdate(imgId, imgPath);
+                    showToast('✅ 图片已保存: ' + imgPath);
+                } else {
+                    showToast('❌ 上传失败: ' + (result.error || ''));
+                }
+            })
+            .catch(e => {
+                showToast('❌ 上传失败，请确认本地服务器已启动');
+            });
+        };
+        reader.readAsDataURL(file);
     } else {
         // Web mode: use data URL (less reliable)
         const reader = new FileReader();
