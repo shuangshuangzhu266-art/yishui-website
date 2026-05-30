@@ -145,22 +145,65 @@ function updateActiveNav() {
     });
 }
 
-// ===== Contact Form =====
+// ===== Contact Form + PushPlus =====
+var PUSHPLUS_TOKEN = 'fb9b401a75f54c6bb6ef83ff9a0ba5f1';
+
 function handleContactSubmit(event) {
     event.preventDefault();
     var form = document.getElementById('contactForm');
     var success = document.getElementById('formSuccess');
+    var submitBtn = form.querySelector('button[type="submit"]');
 
-    // Simulate form submission
-    form.style.display = 'none';
-    success.style.display = 'block';
+    // Collect form data
+    var formData = new FormData(form);
+    var name = formData.get('Name') || '';
+    var email = formData.get('Email') || '';
+    var phone = formData.get('Phone') || '';
+    var message = formData.get('Message') || '';
+    var product = formData.get('Product') || '';
 
-    // Reset after 5 seconds
+    // Build PushPlus content
+    var pushTitle = 'HELIDA 网站新询价';
+    if (name) pushTitle += ' - ' + name;
+    var pushContent = '<h3>📬 网站收到新留言</h3>';
+    pushContent += '<p><b>姓名：</b>' + name + '</p>';
+    pushContent += '<p><b>邮箱：</b>' + email + '</p>';
+    if (phone) pushContent += '<p><b>电话：</b>' + phone + '</p>';
+    if (message) pushContent += '<p><b>留言：</b>' + message + '</p>';
+    if (product) pushContent += '<hr><p><b>📦 询价产品：</b></p><p>' + product.split(' | ')[0] + '</p><p>' + product.split(' | ')[1] + '</p>';
+    pushContent += '<hr><p style="color:#999;font-size:12px;">来自 helida-tools.com</p>';
+
+    // Send to PushPlus
+    var xhr = new XMLHttpRequest();
+    xhr.open('POST', 'https://www.pushplus.plus/send', true);
+    xhr.setRequestHeader('Content-Type', 'application/json');
+    xhr.onload = function() {
+        // Submit original form to formsubmit.co after PushPlus
+        form.submit();
+    };
+    xhr.onerror = function() {
+        // Still submit form even if PushPlus fails
+        form.submit();
+    };
+    xhr.send(JSON.stringify({
+        token: PUSHPLUS_TOKEN,
+        title: pushTitle,
+        content: pushContent
+    }));
+
+    // Show success
+    if (submitBtn) submitBtn.disabled = true;
     setTimeout(function() {
-        form.style.display = '';
-        success.style.display = 'none';
-        form.reset();
-    }, 5000);
+        form.style.display = 'none';
+        success.style.display = 'block';
+        setTimeout(function() {
+            form.style.display = '';
+            success.style.display = 'none';
+            form.reset();
+            if (submitBtn) submitBtn.disabled = false;
+            clearInquiry();
+        }, 5000);
+    }, 1000);
 }
 
 // ===== Newsletter Form =====
