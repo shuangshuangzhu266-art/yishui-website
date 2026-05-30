@@ -520,6 +520,21 @@ const DEFAULT_PASSWORD = 'helida2024';
 let content = null;
 let adminLang = 'zh'; // Admin editing language
 let currentImageCallback = null;
+let localApiReady = false;
+
+// Detect if running on local admin server
+const LOCAL_API = (() => {
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        return window.location.origin;
+    }
+    return null;
+})();
+
+if (LOCAL_API) {
+    console.log('🏠 本地服务器模式: ' + LOCAL_API);
+    // Check server is running
+    fetch(LOCAL_API + '/api/ping').then(r => r.ok).catch(() => {});
+}
 
 // ===== Login =====
 function doLogin() {
@@ -702,22 +717,45 @@ function getDefaultContent() {
 
 function saveAllChanges() {
     if (!content) return;
-    // Ensure version matches server so localStorage overrides work
+    // Ensure version matches
     if (window.DEFAULT_CONTENT && window.DEFAULT_CONTENT.version) {
         content.version = window.DEFAULT_CONTENT.version;
     }
+    const json = JSON.stringify(content);
+
+    // Always save to localStorage as backup
     try {
-        const json = JSON.stringify(content);
-        // Warn if data is getting large (localStorage limit ~5MB)
         const sizeMB = (new Blob([json]).size / 1024 / 1024).toFixed(2);
         if (sizeMB > 3) {
             showToast('⚠️ 数据较大(' + sizeMB + 'MB)，建议使用文件路径而非直接上传图片');
         }
         localStorage.setItem(CONTENT_KEY, json);
-        showToast('✅ 所有更改已保存！刷新首页查看效果。');
     } catch(e) {
-        showToast('❌ 保存失败！可能是图片太大。请使用图片文件路径代替上传。');
-        console.error('Save failed:', e);
+        showToast('⚠️ 浏览器存储空间不足，请使用本地服务器模式');
+    }
+
+    // If running on local server, POST to save + push
+    if (LOCAL_API) {
+        showToast('⏳ 正在保存并推送到 GitHub...');
+        fetch(LOCAL_API + '/api/save', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: json
+        })
+        .then(r => r.json())
+        .then(result => {
+            if (result.ok) {
+                showToast('✅ 已保存并推送！' + (result.git || ''));
+            } else {
+                showToast('❌ 保存失败: ' + (result.error || '未知错误'));
+            }
+        })
+        .catch(e => {
+            showToast('❌ 无法连接本地服务器，请确认已启动 admin_server.py');
+        });
+    } else {
+        // Web mode: save to localStorage only
+        showToast('✅ 已保存到浏览器。⚠️ 请运行本地服务器以更新网站！');
     }
 }
 
@@ -793,23 +831,42 @@ window._imgUpdateHandlers = {};
 document.getElementById('imageFileInput').addEventListener('change', function(e) {
     const file = e.target.files[0];
     if (!file || !currentImageCallback) return;
-    const reader = new FileReader();
-    reader.onload = function(ev) {
-        const dataUrl = ev.target.result;
-        const imgId = currentImageCallback.imgId;
-        updateImagePreview(imgId, dataUrl);
-        handleImageUpdate(imgId, dataUrl);
-        // Store image in localStorage
-        try {
-            const images = JSON.parse(localStorage.getItem(IMAGES_KEY) || '{}');
-            images[dataUrl.substr(0, 50)] = dataUrl;
-            localStorage.setItem(IMAGES_KEY, JSON.stringify(images));
-        } catch(storeErr) {
-            // localStorage might be full for large images
-            showToast('⚠️ 图片较大，建议使用URL路径而非直接上传');
-        }
-    };
-    reader.readAsDataURL(file);
+
+    if (LOCAL_API) {
+        // Upload via local server - saves to images/ folder
+        showToast('⏳ 正在上传图片...');
+        const formData = new FormData();
+        formData.append('image', file);
+
+        fetch(LOCAL_API + '/api/upload-image', { method: 'POST', body: formData })
+        .then(r => r.json())
+        .then(result => {
+            if (result.ok) {
+                const imgPath = result.path;
+                const imgId = currentImageCallback.imgId;
+                updateImagePreview(imgId, imgPath);
+                handleImageUpdate(imgId, imgPath);
+                showToast('✅ 图片已保存: ' + imgPath);
+            } else {
+                showToast('❌ 上传失败: ' + (result.error || ''));
+            }
+        })
+        .catch(e => {
+            showToast('❌ 上传失败，请确认本地服务器已启动');
+        });
+    } else {
+        // Web mode: use data URL (less reliable)
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+            const dataUrl = ev.target.result;
+            const imgId = currentImageCallback.imgId;
+            updateImagePreview(imgId, dataUrl);
+            handleImageUpdate(imgId, dataUrl);
+            showToast('⚠️ 网页模式：图片存为临时URL，建议使用本地服务器');
+        };
+        reader.readAsDataURL(file);
+    }
+
     currentImageCallback = null;
     this.value = '';
 });
@@ -1055,28 +1112,6 @@ function updateProdImg(ci, ii, src) {
     }
 }
 
-if (typeof currentImageCallback === 'undefined') {
-    document.getElementById('imageFileInput').addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (!file || !currentImageCallback) return;
-        const reader = new FileReader();
-        reader.onload = function(ev) {
-            const dataUrl = ev.target.result;
-            if (currentImageCallback.callback) {
-                currentImageCallback.callback(dataUrl);
-            }
-            if (currentImageCallback.imgId) {
-                updateImagePreview(currentImageCallback.imgId, dataUrl);
-            }
-            const images = JSON.parse(localStorage.getItem(IMAGES_KEY) || '{}');
-            images[dataUrl.substr(0, 50)] = dataUrl;
-            localStorage.setItem(IMAGES_KEY, JSON.stringify(images));
-        };
-        reader.readAsDataURL(file);
-        currentImageCallback = null;
-        this.value = '';
-    });
-}
 
 // ===== Certificates Editor =====
 function renderCertificates() {
