@@ -156,21 +156,21 @@ function handleContactSubmit(event) {
 
     // Collect form data
     var formData = new FormData(form);
-    var name = formData.get('Name') || '';
-    var email = formData.get('Email') || '';
     var phone = formData.get('Phone') || '';
     var message = formData.get('Message') || '';
     var product = formData.get('Product') || '';
 
     // Build PushPlus content
     var pushTitle = 'HELIDA 网站新询价';
-    if (name) pushTitle += ' - ' + name;
-    var pushContent = '<h3>📬 网站收到新留言</h3>';
-    pushContent += '<p><b>姓名：</b>' + name + '</p>';
-    pushContent += '<p><b>邮箱：</b>' + email + '</p>';
-    if (phone) pushContent += '<p><b>电话：</b>' + phone + '</p>';
-    if (message) pushContent += '<p><b>留言：</b>' + message + '</p>';
-    if (product) pushContent += '<hr><p><b>📦 询价产品：</b></p><p>' + product.split(' | ')[0] + '</p><p>' + product.split(' | ')[1] + '</p>';
+    if (phone) pushTitle += ' - ' + phone;
+    var pushContent = '<h3>📬 网站收到新询价</h3>';
+    if (phone) pushContent += '<p><b>📞 电话：</b>' + phone + '</p>';
+    if (message) pushContent += '<p><b>💬 留言：</b>' + message + '</p>';
+    if (product) {
+        pushContent += '<hr><p><b>📦 询价产品：</b></p>';
+        pushContent += '<p>' + product.split(' | ')[0] + '</p>';
+        pushContent += '<p style="color:#666;">' + (product.split(' | ')[1] || '') + '</p>';
+    }
     pushContent += '<hr><p style="color:#999;font-size:12px;">来自 helida-tools.com</p>';
 
     // Send to PushPlus

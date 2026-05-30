@@ -497,21 +497,15 @@
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_next" value="https://www.helida-tools.com/#contact">
                         <input type="hidden" name="Product" id="inquiryProductField" value="">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <input type="text" name="Name" required data-i18n="contactFormName" placeholder="Your Name">
-                            </div>
-                            <div class="form-group">
-                                <input type="email" name="Email" required data-i18n="contactFormEmail" placeholder="Your Email">
-                            </div>
+                        <input type="hidden" name="Name" value="Website Inquiry">
+                        <input type="hidden" name="Email" value="inquiry@helida-tools.com">
+                        <div class="form-group">
+                            <input type="tel" name="Phone" required data-i18n="contactFormPhone" placeholder="Your Phone / WhatsApp">
                         </div>
                         <div class="form-group">
-                            <input type="tel" name="Phone" data-i18n="contactFormPhone" placeholder="Your Phone">
+                            <textarea rows="5" name="Message" required data-i18n="contactFormMsg" placeholder="Your Message (Product, Quantity, Destination...)"></textarea>
                         </div>
-                        <div class="form-group">
-                            <textarea rows="5" name="Message" required data-i18n="contactFormMsg" placeholder="Your Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block" data-i18n="contactFormSubmit">Submit</button>
+                        <button type="submit" class="btn btn-primary btn-block" data-i18n="contactFormSubmit">Send Inquiry</button>
                     </form>
                     <div class="form-success" id="formSuccess" style="display:none">
                         <i class="fas fa-check-circle"></i>
