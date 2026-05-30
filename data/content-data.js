@@ -696,5 +696,5 @@ window.DEFAULT_CONTENT = {
       "zh": "订阅以获取最新产品和新闻。"
     }
   },
-  "version": 3
+  "version": 4
 };
