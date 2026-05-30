@@ -776,7 +776,8 @@ img {
 }
 
 .product-img {
-    height: 200px;
+    height: 260px;
+    padding: 16px;
     background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
     display: flex;
     align-items: center;
@@ -791,7 +792,7 @@ img {
 .product-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: var(--transition);
 }
 
@@ -908,7 +909,7 @@ img {
 }
 
 .product-card-sub .product-img {
-    height: 200px;
+    height: 260px;
 }
 
 .product-card-sub h4 {
