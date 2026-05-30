@@ -195,11 +195,16 @@
             // Build items HTML
             var itemsHtml = '';
             cat.items.forEach(function(item) {
-                itemsHtml += '<div class="product-card product-card-sub">' +
-                    '<div class="product-img"><img src="' + item.image + '" alt="' + ct(item.title, lang) + '" loading="lazy"></div>' +
+                var titleText = ct(item.title, lang);
+                var sizeText = ct(item.size, lang);
+                itemsHtml += '<div class="product-card product-card-sub" onclick="productInquiry(\'' +
+                    item.image.replace(/'/g, "\\'") + '\',\'' +
+                    titleText.replace(/'/g, "\\'") + '\',\'' +
+                    sizeText.replace(/'/g, "\\'") + '\')">' +
+                    '<div class="product-img"><img src="' + item.image + '" alt="' + titleText + '" loading="lazy"></div>' +
                     '<div class="product-info">' +
-                        '<h4>' + ct(item.title, lang) + '</h4>' +
-                        '<span class="product-tag">' + ct(item.size, lang) + '</span>' +
+                        '<h4>' + titleText + '</h4>' +
+                        '<span class="product-tag">' + sizeText + '</span>' +
                     '</div>' +
                 '</div>';
             });

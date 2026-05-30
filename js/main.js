@@ -219,46 +219,26 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ===== Product Click → Inquiry =====
-function setupProductInquiry() {
-    // Use event delegation on the products section and any product cards
-    document.addEventListener('click', function(e) {
-        // Find the closest product card
-        var card = e.target.closest('.product-card-sub');
-        if (!card) return;
+function productInquiry(imgSrc, title, size) {
+    var inquiryDiv = document.getElementById('inquiryProduct');
+    var inquiryImg = document.getElementById('inquiryImg');
+    var inquiryTitle = document.getElementById('inquiryTitle');
+    var inquirySize = document.getElementById('inquirySize');
+    var inquiryField = document.getElementById('inquiryProductField');
 
-        // Skip if clicking the "More Models" dummy card
-        if (card.classList.contains('product-card-add') || card.classList.contains('product-card-dummy')) return;
+    if (inquiryDiv && inquiryImg && inquiryTitle) {
+        inquiryImg.src = imgSrc;
+        inquiryTitle.textContent = title;
+        if (inquirySize) inquirySize.textContent = size || '';
+        if (inquiryField) inquiryField.value = title + ' | ' + (size || '') + ' | ' + imgSrc;
+        inquiryDiv.style.display = 'block';
+    }
 
-        // Extract product info from the card
-        var imgEl = card.querySelector('.product-img img');
-        var titleEl = card.querySelector('.product-info h4');
-        var sizeEl = card.querySelector('.product-tag');
-
-        var imgSrc = imgEl ? imgEl.src : '';
-        var title = titleEl ? titleEl.textContent : '';
-        var size = sizeEl ? sizeEl.textContent : '';
-
-        // Update inquiry indicator
-        var inquiryDiv = document.getElementById('inquiryProduct');
-        var inquiryImg = document.getElementById('inquiryImg');
-        var inquiryTitle = document.getElementById('inquiryTitle');
-        var inquirySize = document.getElementById('inquirySize');
-        var inquiryField = document.getElementById('inquiryProductField');
-
-        if (inquiryDiv && inquiryImg && inquiryTitle) {
-            inquiryImg.src = imgSrc;
-            inquiryTitle.textContent = title;
-            if (inquirySize) inquirySize.textContent = size;
-            if (inquiryField) inquiryField.value = title + ' | ' + size + ' | ' + imgSrc;
-            inquiryDiv.style.display = 'block';
-        }
-
-        // Scroll to contact section
-        var contactSection = document.getElementById('contact');
-        if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth' });
-        }
-    });
+    // Scroll to contact section
+    var contactSection = document.getElementById('contact');
+    if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
 // Clear inquiry
@@ -270,11 +250,11 @@ function clearInquiry() {
 }
 
 // Expose to global scope
+window.productInquiry = productInquiry;
 window.clearInquiry = clearInquiry;
 
 // ===== Initialize =====
 document.addEventListener('DOMContentLoaded', function() {
-    setupProductInquiry();
     updateActiveNav();
     // Slider will init after content loader finishes (or immediately if no content loader)
     if (window.isContentReady && window.isContentReady()) {
