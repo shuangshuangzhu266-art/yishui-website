@@ -438,6 +438,39 @@
                                                         "en":  "4.5in (115mm) x 0.8mm x 22.23mm Ultra Thin",
                                                         "zh":  "4.5寸 115mm × 0.8mm × 22.23mm 超薄"
                                                     }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/turbo-wave-new-1.jpg",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 4.5in (115mm) Professional Universal",
+                                                         "zh":  "金刚石涡轮波纹片 4.5寸 专业通用型"
+                                                     },
+                                           "size":  {
+                                                        "en":  "4.5in (115mm) x 1.6mm x 22.23mm Professional",
+                                                        "zh":  "4.5寸 115mm × 1.6mm × 22.23mm 专业型"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/turbo-wave-new-2.jpg",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 5in (125mm) Turbo Wave Premium",
+                                                         "zh":  "金刚石涡轮波纹片 5寸 优质波纹型"
+                                                     },
+                                           "size":  {
+                                                        "en":  "5in (125mm) x 1.8mm x 22.23mm Turbo Premium",
+                                                        "zh":  "5寸 125mm × 1.8mm × 22.23mm 优质波纹"
+                                                    }
+                                       },
+                                       {
+                                           "image":  "images/wave-blade/turbo-wave-new-3.jpg",
+                                           "title":  {
+                                                         "en":  "Turbo Wave Diamond Blade 7in (180mm) High Speed Reinforced",
+                                                         "zh":  "金刚石涡轮波纹片 7寸 高速加强型"
+                                                     },
+                                           "size":  {
+                                                        "en":  "7in (180mm) x 2.2mm x 22.23mm High Speed Reinforced",
+                                                        "zh":  "7寸 180mm × 2.2mm × 22.23mm 高速加强"
+                                                    }
                                        }
                                    ]
                      },
