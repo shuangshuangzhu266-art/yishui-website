@@ -12,7 +12,10 @@ import sys
 import subprocess
 import shutil
 import urllib.parse
+import base64
 from pathlib import Path
+from io import BytesIO
+from PIL import Image
 
 PORT = 8080
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -57,7 +60,9 @@ class AdminHandler(http.server.SimpleHTTPRequestHandler):
             self.send_header("Content-Type", "image/x-icon")
 
         try:
-            filepath = os.path.join(ROOT, path.lstrip("/"))
+            # URL-decode path to handle Chinese filenames
+            decoded = urllib.parse.unquote(path.lstrip("/"))
+            filepath = os.path.join(ROOT, decoded)
             if not os.path.isfile(filepath):
                 self.send_error(404)
                 return
@@ -138,8 +143,29 @@ class AdminHandler(http.server.SimpleHTTPRequestHandler):
             if "," in b64_data:
                 b64_data = b64_data.split(",", 1)[1]
 
-            import base64
             file_data = base64.b64decode(b64_data)
+
+            # Resize image to standard size (max 500px, match existing product images)
+            try:
+                img = Image.open(BytesIO(file_data))
+                w, h = img.size
+                max_size = 500
+                if w > max_size or h > max_size:
+                    ratio = min(max_size / w, max_size / h)
+                    new_size = (int(w * ratio), int(h * ratio))
+                    img = img.resize(new_size, Image.LANCZOS)
+                    # Convert RGBA to RGB if needed
+                    if img.mode == 'RGBA':
+                        background = Image.new('RGB', img.size, (255, 255, 255))
+                        background.paste(img, mask=img.split()[3])
+                        img = background
+                    elif img.mode != 'RGB':
+                        img = img.convert('RGB')
+                    buf = BytesIO()
+                    img.save(buf, format='JPEG', quality=92, optimize=True)
+                    file_data = buf.getvalue()
+            except Exception as e:
+                print(f"  [resize skipped: {e}]")
 
             # 保存到 images/ 文件夹
             dest_dir = os.path.join(ROOT, "images")
