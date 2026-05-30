@@ -148,7 +148,7 @@ window.DEFAULT_CONTENT = {
           "image": "images/wave-blade/432.jpg",
           "title": {
             "en": "Turbo Wave Diamond Blade 4in (105mm) Ceramic Tile Dry Cut",
-            "zh": "金刚石涡轮波纹片 4寸105mm 瓷砖干切"
+            "zh": "金刚石涡轮波纹片 4.5寸115mm 瓷砖干切"
           },
           "size": {
             "en": "4in (105mm) x 1.2mm x 20mm Arbor",
@@ -696,5 +696,5 @@ window.DEFAULT_CONTENT = {
       "zh": "订阅以获取最新产品和新闻。"
     }
   },
-  "version": 4
+  "version": 5
 };
