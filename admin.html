@@ -832,8 +832,11 @@ document.getElementById('imageFileInput').addEventListener('change', function(e)
     const file = e.target.files[0];
     if (!file || !currentImageCallback) return;
 
+    const callback = currentImageCallback; // Capture before async
+    currentImageCallback = null;
+    this.value = '';
+
     if (LOCAL_API) {
-        // Upload via local server - saves to images/ folder
         showToast('⏳ 正在上传图片...');
         const reader = new FileReader();
         reader.onload = function(ev) {
@@ -849,9 +852,14 @@ document.getElementById('imageFileInput').addEventListener('change', function(e)
             .then(result => {
                 if (result.ok) {
                     const imgPath = result.path;
-                    const imgId = currentImageCallback.imgId;
-                    updateImagePreview(imgId, imgPath);
-                    handleImageUpdate(imgId, imgPath);
+                    // Update preview in DOM
+                    updateImagePreview(callback.imgId, imgPath);
+                    // Update data model via callback
+                    if (callback.callback) {
+                        callback.callback(imgPath);
+                    } else {
+                        handleImageUpdate(callback.imgId, imgPath);
+                    }
                     showToast('✅ 图片已保存: ' + imgPath);
                 } else {
                     showToast('❌ 上传失败: ' + (result.error || ''));
@@ -863,20 +871,19 @@ document.getElementById('imageFileInput').addEventListener('change', function(e)
         };
         reader.readAsDataURL(file);
     } else {
-        // Web mode: use data URL (less reliable)
-        const reader = new FileReader();
-        reader.onload = function(ev) {
+        const reader2 = new FileReader();
+        reader2.onload = function(ev) {
             const dataUrl = ev.target.result;
-            const imgId = currentImageCallback.imgId;
-            updateImagePreview(imgId, dataUrl);
-            handleImageUpdate(imgId, dataUrl);
+            updateImagePreview(callback.imgId, dataUrl);
+            if (callback.callback) {
+                callback.callback(dataUrl);
+            } else {
+                handleImageUpdate(callback.imgId, dataUrl);
+            }
             showToast('⚠️ 网页模式：图片存为临时URL，建议使用本地服务器');
         };
-        reader.readAsDataURL(file);
+        reader2.readAsDataURL(file);
     }
-
-    currentImageCallback = null;
-    this.value = '';
 });
 
 function updateImagePreview(imgId, src) {

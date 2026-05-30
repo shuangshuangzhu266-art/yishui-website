@@ -32,8 +32,42 @@ class AdminHandler(http.server.SimpleHTTPRequestHandler):
             self.end_headers()
             return
 
-        # 静态文件
-        return http.server.SimpleHTTPRequestHandler.do_GET(self)
+        # 静态文件，禁用缓存
+        self.send_response(200)
+        self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
+        self.send_header("Pragma", "no-cache")
+        self.send_header("Expires", "0")
+
+        # 根据扩展名设置 Content-Type
+        if path.endswith(".html"):
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+        elif path.endswith(".js"):
+            self.send_header("Content-Type", "application/javascript; charset=utf-8")
+        elif path.endswith(".css"):
+            self.send_header("Content-Type", "text/css; charset=utf-8")
+        elif path.endswith(".json"):
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+        elif path.endswith(".png"):
+            self.send_header("Content-Type", "image/png")
+        elif path.endswith(".jpg") or path.endswith(".jpeg"):
+            self.send_header("Content-Type", "image/jpeg")
+        elif path.endswith(".svg"):
+            self.send_header("Content-Type", "image/svg+xml")
+        elif path.endswith(".ico"):
+            self.send_header("Content-Type", "image/x-icon")
+
+        try:
+            filepath = os.path.join(ROOT, path.lstrip("/"))
+            if not os.path.isfile(filepath):
+                self.send_error(404)
+                return
+            with open(filepath, "rb") as f:
+                content = f.read()
+            self.send_header("Content-Length", len(content))
+            self.end_headers()
+            self.wfile.write(content)
+        except Exception:
+            self.send_error(500)
 
     def do_POST(self):
         path = urllib.parse.urlparse(self.path).path
