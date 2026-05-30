@@ -147,9 +147,13 @@ function updateActiveNav() {
 
 // ===== Contact Form + PushPlus =====
 var PUSHPLUS_TOKEN = 'fb9b401a75f54c6bb6ef83ff9a0ba5f1';
+var formSubmitting = false;
 
 function handleContactSubmit(event) {
     event.preventDefault();
+    if (formSubmitting) return; // Prevent double submission
+    formSubmitting = true;
+
     var form = document.getElementById('contactForm');
     var success = document.getElementById('formSuccess');
     var submitBtn = form.querySelector('button[type="submit"]');
@@ -173,37 +177,42 @@ function handleContactSubmit(event) {
     }
     pushContent += '<hr><p style="color:#999;font-size:12px;">来自 helida-tools.com</p>';
 
-    // Send to PushPlus
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'https://www.pushplus.plus/send', true);
-    xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.onload = function() {
-        // Submit original form to formsubmit.co after PushPlus
-        form.submit();
-    };
-    xhr.onerror = function() {
-        // Still submit form even if PushPlus fails
-        form.submit();
-    };
-    xhr.send(JSON.stringify({
-        token: PUSHPLUS_TOKEN,
-        title: pushTitle,
-        content: pushContent
-    }));
-
-    // Show success
+    // Show success immediately
     if (submitBtn) submitBtn.disabled = true;
+    form.style.display = 'none';
+    success.style.display = 'block';
+
+    // Send to PushPlus (fire and forget - form already submitted to formsubmit.co)
+    fetch('https://www.pushplus.plus/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            token: PUSHPLUS_TOKEN,
+            title: pushTitle,
+            content: pushContent
+        })
+    }).then(function(r) { return r.json(); })
+    .then(function(data) {
+        console.log('PushPlus response:', data);
+    }).catch(function(err) {
+        console.error('PushPlus error:', err);
+    });
+
+    // Let form submit to formsubmit.co naturally after preventing default above
+    // Use a tiny delay so PushPlus fires first
     setTimeout(function() {
-        form.style.display = 'none';
-        success.style.display = 'block';
-        setTimeout(function() {
-            form.style.display = '';
-            success.style.display = 'none';
-            form.reset();
-            if (submitBtn) submitBtn.disabled = false;
-            clearInquiry();
-        }, 5000);
-    }, 1000);
+        form.submit();
+    }, 500);
+
+    // Reset form after delay
+    setTimeout(function() {
+        form.style.display = '';
+        success.style.display = 'none';
+        form.reset();
+        if (submitBtn) submitBtn.disabled = false;
+        formSubmitting = false;
+        clearInquiry();
+    }, 5000);
 }
 
 // ===== Newsletter Form =====
