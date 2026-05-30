@@ -243,32 +243,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     });
 });
 
-// ===== Animate elements on scroll =====
-var observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-// Observe product cards, cert cards, news cards with animation
-document.addEventListener('DOMContentLoaded', function() {
-    var animElements = document.querySelectorAll('.product-card, .cert-card, .news-card, .stat');
-    animElements.forEach(function(el) {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-});
+// Scroll animations removed - product cards now display at full brightness immediately
 
 // ===== Product Click → Inquiry =====
 function productInquiry(imgSrc, title, size) {
