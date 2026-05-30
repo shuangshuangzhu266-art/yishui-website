@@ -48,9 +48,15 @@
             if (xhr.status >= 200 && xhr.status < 400) {
                 try { content = JSON.parse(xhr.responseText); } catch(e) {}
             }
-            if (localContent && content) {
+
+            // Version check: if server has newer version, discard stale localStorage
+            if (content && localContent && content.version && (!localContent.version || localContent.version < content.version)) {
+                localContent = null;
+            }
+            // Merge localStorage overrides only if versions match
+            if (localContent && content && localContent.version === content.version) {
                 content = deepMerge(content, localContent);
-            } else if (localContent) {
+            } else if (localContent && !content) {
                 content = localContent;
             }
             if (content) {

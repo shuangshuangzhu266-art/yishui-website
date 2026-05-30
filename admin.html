@@ -509,18 +509,39 @@ function initAdmin() {
 }
 
 function loadContent() {
+    // Load server version first as baseline
+    if (window.DEFAULT_CONTENT && window.DEFAULT_CONTENT.banner) {
+        content = JSON.parse(JSON.stringify(window.DEFAULT_CONTENT)); // Deep clone
+    } else {
+        content = getDefaultContent();
+    }
+
+    // Check if localStorage has edits from same version
     const saved = localStorage.getItem(CONTENT_KEY);
     if (saved) {
-        try { content = JSON.parse(saved); } catch(e) { content = null; }
-    }
-    if (!content) {
-        // Use embedded default content (loaded from data/content-data.js)
-        if (window.DEFAULT_CONTENT && window.DEFAULT_CONTENT.banner) {
-            content = window.DEFAULT_CONTENT;
-        } else {
-            content = getDefaultContent();
+        let localContent = null;
+        try { localContent = JSON.parse(saved); } catch(e) {}
+        // Only merge if localStorage version matches server version
+        if (localContent && content.version && localContent.version === content.version) {
+            content = deepMergeContent(content, localContent);
+        } else if (localContent) {
+            // Version mismatch - old data, discard it
+            localStorage.removeItem(CONTENT_KEY);
         }
     }
+}
+
+function deepMergeContent(target, source) {
+    const result = JSON.parse(JSON.stringify(target));
+    for (let key in source) {
+        if (!source.hasOwnProperty(key)) continue;
+        if (source[key] && typeof source[key] === 'object' && !Array.isArray(source[key])) {
+            result[key] = deepMergeContent(result[key] || {}, source[key]);
+        } else {
+            result[key] = source[key];
+        }
+    }
+    return result;
 }
 
 function getDefaultContent() {
@@ -648,8 +669,12 @@ function getDefaultContent() {
 
 function saveAllChanges() {
     if (!content) return;
+    // Ensure version matches server so localStorage overrides work
+    if (window.DEFAULT_CONTENT && window.DEFAULT_CONTENT.version) {
+        content.version = window.DEFAULT_CONTENT.version;
+    }
     localStorage.setItem(CONTENT_KEY, JSON.stringify(content));
-    showToast('✅ 所有更改已保存！网站已更新。');
+    showToast('✅ 所有更改已保存！网站已更新。刷新首页查看效果。');
 }
 
 // ===== Language Tabs Helper =====
