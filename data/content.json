@@ -374,17 +374,6 @@
           }
         },
         {
-          "image": "images/wave-blade/IMG_1098.jpg",
-          "title": {
-            "en": "Turbo Wave Diamond Blade 10in (250mm) Large Porcelain Dekton",
-            "zh": "金刚石涡轮波纹片 10寸250mm 大规格岩板瓷砖"
-          },
-          "size": {
-            "en": "10in (250mm) x 2.0mm x 25.4mm Arbor",
-            "zh": "10寸 250mm × 2.0mm × 25.4mm 内孔"
-          }
-        },
-        {
           "image": "images/wave-blade/IMG_1099.jpg",
           "title": {
             "en": "Turbo Wave Diamond Blade 10in (250mm) Granite Marble Pro",
@@ -489,34 +478,199 @@
         {
           "image": "images/product-5.jpg",
           "title": {
-            "en": "Granite Saw Blade",
-            "zh": "花岗岩锯片"
+            "en": "Granite Saw Blade 4in (105mm) Silent Core Professional",
+            "zh": "花岗岩锯片 4寸105mm 静音专业型"
           },
           "size": {
-            "en": "Size: 4\" - 36\"",
-            "zh": "尺寸: 4\" - 36\""
+            "en": "4in (105mm) x 2.0mm x 20mm Silent Core",
+            "zh": "4寸 105mm x 2.0mm x 20mm 静音型"
+          }
+        },
+        {
+          "image": "images/product-5.jpg",
+          "title": {
+            "en": "Granite Saw Blade 4.5in (115mm) High Segment Turbo",
+            "zh": "花岗岩锯片 4.5寸115mm 高齿涡轮型"
+          },
+          "size": {
+            "en": "4.5in (115mm) x 2.2mm x 22.23mm High Segment",
+            "zh": "4.5寸 115mm x 2.2mm x 22.23mm 高齿型"
+          }
+        },
+        {
+          "image": "images/product-5.jpg",
+          "title": {
+            "en": "Granite Saw Blade 5in (125mm) Continuous Rim Smooth Cut",
+            "zh": "花岗岩锯片 5寸125mm 连续波纹平滑切割"
+          },
+          "size": {
+            "en": "5in (125mm) x 2.0mm x 22.23mm Continuous Rim",
+            "zh": "5寸 125mm x 2.0mm x 22.23mm 连续波纹"
+          }
+        },
+        {
+          "image": "images/product-5.jpg",
+          "title": {
+            "en": "Granite Saw Blade 6in (150mm) Reinforced Professional",
+            "zh": "花岗岩锯片 6寸150mm 加强专业型"
+          },
+          "size": {
+            "en": "6in (150mm) x 2.4mm x 22.23mm Reinforced",
+            "zh": "6寸 150mm x 2.4mm x 22.23mm 加强型"
+          }
+        },
+        {
+          "image": "images/product-5.jpg",
+          "title": {
+            "en": "Granite Saw Blade 7in (180mm) High Speed Wet Cut",
+            "zh": "花岗岩锯片 7寸180mm 高速湿切型"
+          },
+          "size": {
+            "en": "7in (180mm) x 2.6mm x 22.23mm High Speed",
+            "zh": "7寸 180mm x 2.6mm x 22.23mm 高速型"
+          }
+        },
+        {
+          "image": "images/product-5.jpg",
+          "title": {
+            "en": "Granite Saw Blade 9in (230mm) Bridge Saw Machine",
+            "zh": "花岗岩锯片 9寸230mm 桥切机专用"
+          },
+          "size": {
+            "en": "9in (230mm) x 2.8mm x 22.23mm Bridge Saw",
+            "zh": "9寸 230mm x 2.8mm x 22.23mm 桥切型"
+          }
+        },
+        {
+          "image": "images/product-5.jpg",
+          "title": {
+            "en": "Granite Saw Blade 12in (300mm) Heavy Duty Slab Cutting",
+            "zh": "花岗岩锯片 12寸300mm 重型板材切割"
+          },
+          "size": {
+            "en": "12in (300mm) x 3.0mm x 25.4mm Heavy Duty",
+            "zh": "12寸 300mm x 3.0mm x 25.4mm 重型"
+          }
+        },
+        {
+          "image": "images/product-5.jpg",
+          "title": {
+            "en": "Granite Saw Blade 14in (350mm) Large Format Professional",
+            "zh": "花岗岩锯片 14寸350mm 大板专业切割"
+          },
+          "size": {
+            "en": "14in (350mm) x 3.2mm x 25.4mm Professional",
+            "zh": "14寸 350mm x 3.2mm x 25.4mm 专业型"
           }
         },
         {
           "image": "images/product-6.jpg",
           "title": {
-            "en": "Marble Saw Blade",
-            "zh": "大理石锯片"
+            "en": "Marble Saw Blade 4in (105mm) Fine Cut Thin Kerf",
+            "zh": "大理石锯片 4寸105mm 精细切割薄片型"
           },
           "size": {
-            "en": "Size: 4\" - 24\"",
-            "zh": "尺寸: 4\" - 24\""
+            "en": "4in (105mm) x 1.6mm x 20mm Thin Kerf",
+            "zh": "4寸 105mm x 1.6mm x 20mm 薄片型"
+          }
+        },
+        {
+          "image": "images/product-6.jpg",
+          "title": {
+            "en": "Marble Saw Blade 4.5in (115mm) Smooth Edge Premium",
+            "zh": "大理石锯片 4.5寸115mm 光滑边缘优质型"
+          },
+          "size": {
+            "en": "4.5in (115mm) x 1.8mm x 22.23mm Premium",
+            "zh": "4.5寸 115mm x 1.8mm x 22.23mm 优质型"
+          }
+        },
+        {
+          "image": "images/product-6.jpg",
+          "title": {
+            "en": "Marble Saw Blade 5in (125mm) Continuous Rim Clean Cut",
+            "zh": "大理石锯片 5寸125mm 连续波纹清洁切割"
+          },
+          "size": {
+            "en": "5in (125mm) x 1.8mm x 22.23mm Continuous Rim",
+            "zh": "5寸 125mm x 1.8mm x 22.23mm 连续波纹"
+          }
+        },
+        {
+          "image": "images/product-6.jpg",
+          "title": {
+            "en": "Marble Saw Blade 7in (180mm) Professional Bridge Saw",
+            "zh": "大理石锯片 7寸180mm 专业桥切型"
+          },
+          "size": {
+            "en": "7in (180mm) x 2.2mm x 22.23mm Professional",
+            "zh": "7寸 180mm x 2.2mm x 22.23mm 专业型"
+          }
+        },
+        {
+          "image": "images/product-6.jpg",
+          "title": {
+            "en": "Marble Saw Blade 9in (230mm) High Precision Cutting",
+            "zh": "大理石锯片 9寸230mm 高精密切割"
+          },
+          "size": {
+            "en": "9in (230mm) x 2.4mm x 22.23mm High Precision",
+            "zh": "9寸 230mm x 2.4mm x 22.23mm 高精密"
+          }
+        },
+        {
+          "image": "images/product-6.jpg",
+          "title": {
+            "en": "Marble Saw Blade 12in (300mm) Large Slab Marble",
+            "zh": "大理石锯片 12寸300mm 大理石板材专用"
+          },
+          "size": {
+            "en": "12in (300mm) x 2.8mm x 25.4mm Large Slab",
+            "zh": "12寸 300mm x 2.8mm x 25.4mm 板材型"
           }
         },
         {
           "image": "images/product-3.jpg",
           "title": {
-            "en": "Quartz & Engineered Stone Blade",
-            "zh": "石英石及人造石锯片"
+            "en": "Quartz Stone Blade 4in (105mm) Engineered Stone Dry Cut",
+            "zh": "石英石锯片 4寸105mm 人造石干切型"
           },
           "size": {
-            "en": "Size: 4\" - 16\"",
-            "zh": "尺寸: 4\" - 16\""
+            "en": "4in (105mm) x 1.6mm x 20mm Dry Cut",
+            "zh": "4寸 105mm x 1.6mm x 20mm 干切型"
+          }
+        },
+        {
+          "image": "images/product-3.jpg",
+          "title": {
+            "en": "Quartz Stone Blade 4.5in (115mm) Multi-Purpose Wet Dry",
+            "zh": "石英石锯片 4.5寸115mm 多用途干湿切"
+          },
+          "size": {
+            "en": "4.5in (115mm) x 1.8mm x 22.23mm Multi-Purpose",
+            "zh": "4.5寸 115mm x 1.8mm x 22.23mm 多用途"
+          }
+        },
+        {
+          "image": "images/product-3.jpg",
+          "title": {
+            "en": "Quartz Stone Blade 5in (125mm) Chip-Free Premium",
+            "zh": "石英石锯片 5寸125mm 无崩边优质型"
+          },
+          "size": {
+            "en": "5in (125mm) x 2.0mm x 22.23mm Chip-Free",
+            "zh": "5寸 125mm x 2.0mm x 22.23mm 无崩边"
+          }
+        },
+        {
+          "image": "images/product-3.jpg",
+          "title": {
+            "en": "Quartz Stone Blade 7in (180mm) Dekton Sintered Stone",
+            "zh": "石英石锯片 7寸180mm 岩板烧结石切割"
+          },
+          "size": {
+            "en": "7in (180mm) x 2.0mm x 22.23mm Dekton",
+            "zh": "7寸 180mm x 2.0mm x 22.23mm 岩板型"
           }
         }
       ]
@@ -536,34 +690,144 @@
         {
           "image": "images/product-7.jpg",
           "title": {
-            "en": "Concrete Cutting Blade",
-            "zh": "混凝土切割片"
+            "en": "Concrete Cutting Blade 12in (300mm) Laser Welded Heavy Duty",
+            "zh": "混凝土切割片 12寸300mm 激光焊接重型"
           },
           "size": {
-            "en": "Size: 12\" - 48\"",
-            "zh": "尺寸: 12\" - 48\""
+            "en": "12in (300mm) x 3.2mm x 25.4mm Laser Welded",
+            "zh": "12寸 300mm x 3.2mm x 25.4mm 激光焊"
+          }
+        },
+        {
+          "image": "images/product-7.jpg",
+          "title": {
+            "en": "Concrete Cutting Blade 14in (350mm) Reinforced Concrete Wet Cut",
+            "zh": "混凝土切割片 14寸350mm 钢筋混凝土湿切"
+          },
+          "size": {
+            "en": "14in (350mm) x 3.4mm x 25.4mm Wet Cut",
+            "zh": "14寸 350mm x 3.4mm x 25.4mm 湿切"
+          }
+        },
+        {
+          "image": "images/product-7.jpg",
+          "title": {
+            "en": "Concrete Cutting Blade 16in (400mm) Professional High Speed",
+            "zh": "混凝土切割片 16寸400mm 专业高速型"
+          },
+          "size": {
+            "en": "16in (400mm) x 3.6mm x 25.4mm High Speed",
+            "zh": "16寸 400mm x 3.6mm x 25.4mm 高速"
+          }
+        },
+        {
+          "image": "images/product-7.jpg",
+          "title": {
+            "en": "Concrete Cutting Blade 18in (450mm) Large Diameter Deep Cut",
+            "zh": "混凝土切割片 18寸450mm 大直径深切割"
+          },
+          "size": {
+            "en": "18in (450mm) x 4.0mm x 25.4mm Deep Cut",
+            "zh": "18寸 450mm x 4.0mm x 25.4mm 深切"
+          }
+        },
+        {
+          "image": "images/product-7.jpg",
+          "title": {
+            "en": "Concrete Cutting Blade 20in (500mm) Road Saw Floor Cutting",
+            "zh": "混凝土切割片 20寸500mm 路面切割地坪型"
+          },
+          "size": {
+            "en": "20in (500mm) x 4.2mm x 25.4mm Road Saw",
+            "zh": "20寸 500mm x 4.2mm x 25.4mm 路面型"
           }
         },
         {
           "image": "images/product-8.jpg",
           "title": {
-            "en": "General Construction Blade",
-            "zh": "通用建筑切割片"
+            "en": "General Construction Blade 4in (105mm) Multi-Material Dry Cut",
+            "zh": "通用建筑切割片 4寸105mm 多材料干切型"
           },
           "size": {
-            "en": "Size: 4\" - 14\"",
-            "zh": "尺寸: 4\" - 14\""
+            "en": "4in (105mm) x 1.8mm x 20mm Multi-Material",
+            "zh": "4寸 105mm x 1.8mm x 20mm 多材料"
+          }
+        },
+        {
+          "image": "images/product-8.jpg",
+          "title": {
+            "en": "General Construction Blade 4.5in (115mm) Brick Block Universal",
+            "zh": "通用建筑切割片 4.5寸115mm 砖块通用型"
+          },
+          "size": {
+            "en": "4.5in (115mm) x 2.0mm x 22.23mm Universal",
+            "zh": "4.5寸 115mm x 2.0mm x 22.23mm 通用"
+          }
+        },
+        {
+          "image": "images/product-8.jpg",
+          "title": {
+            "en": "General Construction Blade 5in (125mm) Reinforced Segmented",
+            "zh": "通用建筑切割片 5寸125mm 加强分段型"
+          },
+          "size": {
+            "en": "5in (125mm) x 2.2mm x 22.23mm Segmented",
+            "zh": "5寸 125mm x 2.2mm x 22.23mm 分段式"
+          }
+        },
+        {
+          "image": "images/product-8.jpg",
+          "title": {
+            "en": "General Construction Blade 7in (180mm) Heavy Duty Wet Dry",
+            "zh": "通用建筑切割片 7寸180mm 重载干湿两用"
+          },
+          "size": {
+            "en": "7in (180mm) x 2.4mm x 22.23mm Heavy Duty",
+            "zh": "7寸 180mm x 2.4mm x 22.23mm 重载"
+          }
+        },
+        {
+          "image": "images/product-8.jpg",
+          "title": {
+            "en": "General Construction Blade 9in (230mm) Professional All-Purpose",
+            "zh": "通用建筑切割片 9寸230mm 专业全能型"
+          },
+          "size": {
+            "en": "9in (230mm) x 2.6mm x 22.23mm Professional",
+            "zh": "9寸 230mm x 2.6mm x 22.23mm 专业"
           }
         },
         {
           "image": "images/product-1.jpg",
           "title": {
-            "en": "Asphalt Cutting Blade",
-            "zh": "沥青切割片"
+            "en": "Asphalt Cutting Blade 12in (300mm) Drop Segment Design",
+            "zh": "沥青切割片 12寸300mm 下沉保护齿设计"
           },
           "size": {
-            "en": "Size: 12\" - 36\"",
-            "zh": "尺寸: 12\" - 36\""
+            "en": "12in (300mm) x 3.0mm x 25.4mm Drop Segment",
+            "zh": "12寸 300mm x 3.0mm x 25.4mm 保护齿"
+          }
+        },
+        {
+          "image": "images/product-1.jpg",
+          "title": {
+            "en": "Asphalt Cutting Blade 14in (350mm) Wide Slot Professional",
+            "zh": "沥青切割片 14寸350mm 宽槽专业型"
+          },
+          "size": {
+            "en": "14in (350mm) x 3.2mm x 25.4mm Wide Slot",
+            "zh": "14寸 350mm x 3.2mm x 25.4mm 宽槽"
+          }
+        },
+        {
+          "image": "images/product-1.jpg",
+          "title": {
+            "en": "Asphalt Cutting Blade 16in (400mm) Green Concrete Asphalt Mix",
+            "zh": "沥青切割片 16寸400mm 沥青混凝土混合"
+          },
+          "size": {
+            "en": "16in (400mm) x 3.6mm x 25.4mm Asphalt Mix",
+            "zh": "16寸 400mm x 3.6mm x 25.4mm 混合"
           }
         }
       ]
@@ -583,23 +847,144 @@
         {
           "image": "images/product-9.jpg",
           "title": {
-            "en": "Diamond Grinding Cup Wheel",
-            "zh": "金刚石磨轮"
+            "en": "Diamond Grinding Cup Wheel 4in (100mm) Single Row Turbo",
+            "zh": "金刚石磨轮 4寸100mm 单排涡轮型"
           },
           "size": {
-            "en": "Size: 4\" - 7\"",
-            "zh": "尺寸: 4\" - 7\""
+            "en": "4in (100mm) Single Row x 22.23mm Arbor",
+            "zh": "4寸 100mm 单排 x 22.23mm 内孔"
+          }
+        },
+        {
+          "image": "images/product-9.jpg",
+          "title": {
+            "en": "Diamond Grinding Cup Wheel 4.5in (115mm) Double Row Premium",
+            "zh": "金刚石磨轮 4.5寸115mm 双排优质型"
+          },
+          "size": {
+            "en": "4.5in (115mm) Double Row x 22.23mm Arbor",
+            "zh": "4.5寸 115mm 双排 x 22.23mm 内孔"
+          }
+        },
+        {
+          "image": "images/product-9.jpg",
+          "title": {
+            "en": "Diamond Grinding Cup Wheel 5in (125mm) Turbo Row Aggressive",
+            "zh": "金刚石磨轮 5寸125mm 涡轮排强力打磨"
+          },
+          "size": {
+            "en": "5in (125mm) Turbo Row x 22.23mm Arbor",
+            "zh": "5寸 125mm 涡轮排 x 22.23mm 内孔"
+          }
+        },
+        {
+          "image": "images/product-9.jpg",
+          "title": {
+            "en": "Diamond Grinding Cup Wheel 5in (125mm) Double Row Smooth Finish",
+            "zh": "金刚石磨轮 5寸125mm 双排精磨型"
+          },
+          "size": {
+            "en": "5in (125mm) Double Row Smooth x 22.23mm Arbor",
+            "zh": "5寸 125mm 双排精磨 x 22.23mm 内孔"
+          }
+        },
+        {
+          "image": "images/product-9.jpg",
+          "title": {
+            "en": "Diamond Grinding Cup Wheel 6in (150mm) Single Row Heavy Duty",
+            "zh": "金刚石磨轮 6寸150mm 单排重载型"
+          },
+          "size": {
+            "en": "6in (150mm) Single Row Heavy x 22.23mm Arbor",
+            "zh": "6寸 150mm 单排重载 x 22.23mm 内孔"
+          }
+        },
+        {
+          "image": "images/product-9.jpg",
+          "title": {
+            "en": "Diamond Grinding Cup Wheel 7in (180mm) Turbo Row Professional",
+            "zh": "金刚石磨轮 7寸180mm 涡轮排专业型"
+          },
+          "size": {
+            "en": "7in (180mm) Turbo Row x 22.23mm Arbor",
+            "zh": "7寸 180mm 涡轮排 x 22.23mm 内孔"
+          }
+        },
+        {
+          "image": "images/product-9.jpg",
+          "title": {
+            "en": "Diamond Grinding Cup Wheel 7in (180mm) Segmented Arrow Design",
+            "zh": "金刚石磨轮 7寸180mm 箭头分段式"
+          },
+          "size": {
+            "en": "7in (180mm) Arrow Segmented x 22.23mm Arbor",
+            "zh": "7寸 180mm 箭头分段 x 22.23mm 内孔"
           }
         },
         {
           "image": "images/product-10.jpg",
           "title": {
-            "en": "Diamond Polishing Pad",
-            "zh": "金刚石抛光垫"
+            "en": "Diamond Polishing Pad 3in (80mm) #50 Coarse Grinding",
+            "zh": "金刚石抛光垫 3寸80mm #50 粗磨"
           },
           "size": {
-            "en": "Size: 3\" - 7\"",
-            "zh": "尺寸: 3\" - 7\""
+            "en": "3in (80mm) #50 Grit Coarse",
+            "zh": "3寸 80mm #50 粗粒度"
+          }
+        },
+        {
+          "image": "images/product-10.jpg",
+          "title": {
+            "en": "Diamond Polishing Pad 4in (100mm) #100 Medium Grinding",
+            "zh": "金刚石抛光垫 4寸100mm #100 中磨"
+          },
+          "size": {
+            "en": "4in (100mm) #100 Grit Medium",
+            "zh": "4寸 100mm #100 中粒度"
+          }
+        },
+        {
+          "image": "images/product-10.jpg",
+          "title": {
+            "en": "Diamond Polishing Pad 4in (100mm) #200 Fine Grinding",
+            "zh": "金刚石抛光垫 4寸100mm #200 细磨"
+          },
+          "size": {
+            "en": "4in (100mm) #200 Grit Fine",
+            "zh": "4寸 100mm #200 细粒度"
+          }
+        },
+        {
+          "image": "images/product-10.jpg",
+          "title": {
+            "en": "Diamond Polishing Pad 5in (125mm) #400 Super Fine",
+            "zh": "金刚石抛光垫 5寸125mm #400 超细磨"
+          },
+          "size": {
+            "en": "5in (125mm) #400 Grit Super Fine",
+            "zh": "5寸 125mm #400 超细粒度"
+          }
+        },
+        {
+          "image": "images/product-10.jpg",
+          "title": {
+            "en": "Diamond Polishing Pad 5in (125mm) #800 Polish Finish",
+            "zh": "金刚石抛光垫 5寸125mm #800 抛光精磨"
+          },
+          "size": {
+            "en": "5in (125mm) #800 Grit Polish",
+            "zh": "5寸 125mm #800 抛光级"
+          }
+        },
+        {
+          "image": "images/product-10.jpg",
+          "title": {
+            "en": "Diamond Polishing Pad 7in (180mm) #1500 High Gloss Buff",
+            "zh": "金刚石抛光垫 7寸180mm #1500 高光打磨"
+          },
+          "size": {
+            "en": "7in (180mm) #1500 Grit High Gloss",
+            "zh": "7寸 180mm #1500 高光级"
           }
         }
       ]
@@ -694,5 +1079,5 @@
       "zh": "订阅以获取最新产品和新闻。"
     }
   },
-  "version": 5
+  "version": 7
 }

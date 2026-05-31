@@ -1,3 +1,5 @@
+// HELIDA Tools - Site Content Data
+// Auto-generated: do not edit directly
 window.DEFAULT_CONTENT = {
   "banner": {
     "slides": [
@@ -371,17 +373,6 @@ window.DEFAULT_CONTENT = {
           "size": {
             "en": "9in (230mm) x 2.4mm x 25.4mm Arbor",
             "zh": "9寸 230mm × 2.4mm × 25.4mm 内孔"
-          }
-        },
-        {
-          "image": "images/wave-blade/IMG_1098.jpg",
-          "title": {
-            "en": "Turbo Wave Diamond Blade 10in (250mm) Large Porcelain Dekton",
-            "zh": "金刚石涡轮波纹片 10寸250mm 大规格岩板瓷砖"
-          },
-          "size": {
-            "en": "10in (250mm) x 2.0mm x 25.4mm Arbor",
-            "zh": "10寸 250mm × 2.0mm × 25.4mm 内孔"
           }
         },
         {
@@ -1090,5 +1081,5 @@ window.DEFAULT_CONTENT = {
       "zh": "订阅以获取最新产品和新闻。"
     }
   },
-  "version": 6
+  "version": 7
 };
