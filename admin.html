@@ -764,7 +764,7 @@ function langTabs(name) {
     return `
         <div class="form-tabs">
             <button class="active" onclick="switchLangTab(this,'zh')">中文</button>
-            <button onclick="switchLangTab(this,'en')">英文</button>
+            <button onclick="switchLangTab(this,'en')">English</button>
         </div>`;
 }
 
@@ -788,7 +788,7 @@ function makeImageUpload(currentSrc, callbackKey) {
     return `
         <div class="image-upload ${currentSrc ? 'has-image' : ''}" id="${imgId}">
             ${currentSrc ? `
-                <img src="${currentSrc}" alt="预览">
+                <img src="${currentSrc}" alt="Preview">
                 <div style="padding:10px;text-align:center;background:rgba(0,0,0,0.8);">
                     <span style="font-size:12px;color:var(--text-muted);">当前图片</span>
                 </div>
@@ -892,7 +892,7 @@ function updateImagePreview(imgId, src) {
     if (src) {
         container.className = 'image-upload has-image';
         container.innerHTML = `
-            <img src="${src}" alt="预览">
+            <img src="${src}" alt="Preview">
             <div style="padding:10px;text-align:center;background:rgba(0,0,0,0.8);">
                 <span style="font-size:12px;color:var(--text-muted);">当前图片</span>
             </div>
@@ -1075,7 +1075,7 @@ function addProductItem(ci) {
     content.products[ci].items.push({
         "image": "",
         "title": { "en": "New Product", "zh": "新产品" },
-        "size": { "en": "Size: Custom", "zh": "尺寸：定制" }
+        "size": { "en": "Size: Custom", "zh": "尺寸: 定制" }
     });
     renderProducts();
 }
@@ -1235,23 +1235,23 @@ function renderContact() {
         <h4 style="margin:20px 0 16px;">社交媒体链接</h4>
         <div class="form-row">
             <div class="form-group">
-                <label><i class="fab fa-facebook"></i> 脸书链接</label>
+                <label><i class="fab fa-facebook"></i> Facebook URL</label>
                 <input type="text" value="${c.social.facebook || ''}" onchange="c.social.facebook = this.value">
             </div>
             <div class="form-group">
-                <label><i class="fab fa-instagram"></i> Instagram 链接</label>
+                <label><i class="fab fa-instagram"></i> Instagram URL</label>
                 <input type="text" value="${c.social.instagram || ''}" onchange="c.social.instagram = this.value">
             </div>
             <div class="form-group">
-                <label><i class="fab fa-youtube"></i> YouTube 链接</label>
+                <label><i class="fab fa-youtube"></i> YouTube URL</label>
                 <input type="text" value="${c.social.youtube || ''}" onchange="c.social.youtube = this.value">
             </div>
             <div class="form-group">
-                <label><i class="fab fa-linkedin"></i> LinkedIn 链接</label>
+                <label><i class="fab fa-linkedin"></i> LinkedIn URL</label>
                 <input type="text" value="${c.social.linkedin || ''}" onchange="c.social.linkedin = this.value">
             </div>
             <div class="form-group">
-                <label><i class="fab fa-x-twitter"></i> X 链接</label>
+                <label><i class="fab fa-x-twitter"></i> Twitter URL</label>
                 <input type="text" value="${c.social.twitter || ''}" onchange="c.social.twitter = this.value">
             </div>
         </div>
